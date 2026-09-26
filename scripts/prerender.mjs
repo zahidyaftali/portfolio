@@ -22,9 +22,24 @@ if (!html.includes(placeholder)) {
 // Escape "<" so the JSON can never close the <script> tag early
 const jsonLd = JSON.stringify(structuredData()).replace(/</g, "\\u003c");
 
+// React writes a few attributes with their JSX spelling (srcSet, fetchPriority...).
+// Browsers treat HTML attribute names case-insensitively, so this only makes the
+// source standard HTML; SVG attributes like viewBox are case-sensitive and left alone.
+const JSX_ATTRS = { srcSet: "srcset", imageSrcSet: "imagesrcset", imageSizes: "imagesizes", fetchPriority: "fetchpriority" };
+const toHtmlAttrs = (markup) =>
+  markup.replace(/<[a-zA-Z][^>]*>/g, (tag) =>
+    tag.replace(/\s(srcSet|imageSrcSet|imageSizes|fetchPriority)=/g, (_, name) => ` ${JSX_ATTRS[name]}=`),
+  );
+
+// React puts its image preload hints at the start of the app markup; they belong in <head>
+let appHtml = render();
+const preloads = appHtml.match(/^(?:<link [^>]*>)+/)?.[0] ?? "";
+appHtml = appHtml.slice(preloads.length);
+const headPreloads = preloads.replace(/(<link [^>]*?)\/?>/g, "  $1 />\n");
+
 html = html
-  .replace(placeholder, `<div id="root">${render()}</div>`)
-  .replace("</head>", `  <script type="application/ld+json">${jsonLd}</script>\n  </head>`);
+  .replace(placeholder, `<div id="root">${toHtmlAttrs(appHtml)}</div>`)
+  .replace("</head>", `${toHtmlAttrs(headPreloads)}  <script type="application/ld+json">${jsonLd}</script>\n  </head>`);
 
 fs.writeFileSync(templatePath, html);
 fs.writeFileSync(path.join(distDir, "sitemap.xml"), sitemapXml(new Date().toISOString().slice(0, 10)));

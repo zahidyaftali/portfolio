@@ -8,7 +8,7 @@
 
 import { faqData, portfolioData, servicesData } from "./data";
 
-export const SITE_URL = "https://zahidyaftali.com";
+export const SITE_URL = "https://www.zahidyaftali.com";
 
 const HOME_URL = `${SITE_URL}/`;
 const absolute = (path: string) => new URL(path, SITE_URL).href;

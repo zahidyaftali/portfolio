@@ -39,6 +39,7 @@ export default function TrustBar() {
                   width={20}
                   height={14}
                   className="h-3.5 w-5 rounded-[2px] object-cover shadow-sm shrink-0"
+                  loading="lazy"
                   decoding="async"
                 />
                 {country.name}
