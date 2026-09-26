@@ -5,6 +5,7 @@
 
 export default function TrustIndicators() {
   const logos = [
+    { id: 7, src: "/assets/images/logos/shopify-logo.webp", alt: "Shopify", width: 320, height: 91 },
     { id: 1, src: "/assets/images/logos/woocommerce-logo.webp", alt: "WooCommerce", width: 320, height: 65 },
     { id: 2, src: "/assets/images/logos/elementor-logo.webp", alt: "Elementor", width: 320, height: 52 },
     { id: 3, src: "/assets/images/logos/wordpress-logo.webp", alt: "WordPress", width: 320, height: 73 },

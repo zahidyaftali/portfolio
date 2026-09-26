@@ -5,58 +5,193 @@
 
 import { ServiceItem, PortfolioItem, ProcessStep, Benefit, Testimonial, FAQItem } from "./types";
 
+// Titles target the main search terms (custom website development, WordPress
+// development services, Shopify website development, web application development)
 export const servicesData: ServiceItem[] = [
+  {
+    id: "custom-dev",
+    title: "Custom Website Development",
+    description: "Hand-coded websites and landing pages built from scratch — fast, responsive and tailored to your brand, with no page-builder bloat. Ideal when an off-the-shelf theme won't do.",
+    iconName: "Code"
+  },
   {
     id: "wp-dev",
     title: "WordPress Website Development",
-    description: "From a simple business site to a complex multi-page build, I handle everything in WordPress — clean code, solid structure, and nothing you don't need.",
+    description: "Business sites, blogs and multi-page builds in WordPress with Elementor, Gutenberg or a custom theme — clean code, solid structure, and easy for you to edit after handover.",
     iconName: "Globe"
   },
   {
-    id: "white-label",
-    title: "White Label WordPress for Agencies",
-    description: "I work quietly in the background on your client projects with full confidentiality. Your brand stays front and centre — nobody will ever know I was there.",
-    iconName: "ShieldCheck"
-  },
-  {
-    id: "woocommerce",
-    title: "WooCommerce Store Development",
-    description: "Need an online store? I build and configure WooCommerce stores that are easy to manage, fast to load, and built to actually convert visitors into buyers.",
+    id: "shopify",
+    title: "Shopify Store Development",
+    description: "Shopify stores set up and designed to sell — product structure, theme customisation, apps and payments. Prefer WordPress? I build WooCommerce stores too.",
     iconName: "ShoppingBag"
   },
   {
-    id: "redesign",
-    title: "WordPress Website Redesign",
-    description: "If your current site feels dated or just isn't working the way it should, I'll rebuild it in WordPress with a cleaner design and a better user experience.",
-    iconName: "Layout"
+    id: "plugin-dev",
+    title: "Custom WordPress Plugin Development",
+    description: "When no existing plugin fits, I write one: custom post types, booking logic, API integrations and admin tools, built to WordPress coding standards.",
+    iconName: "Puzzle"
   },
   {
     id: "theme-dev",
-    title: "Custom WordPress Theme Development",
-    description: "Got a design in Figma or just an idea in your head? I'll turn it into a custom WordPress theme that matches exactly what you're after — pixel by pixel.",
-    iconName: "Sparkles"
+    title: "Custom Theme Development",
+    description: "Got a design in Figma or just an idea in your head? I'll turn it into a lightweight custom WordPress or Shopify theme that matches it pixel by pixel.",
+    iconName: "Palette"
   },
   {
-    id: "speed-opt",
-    title: "WordPress Speed Optimization",
-    description: "Slow sites lose visitors and rankings. I dig into what's dragging your WordPress site down and fix it — Core Web Vitals, load time, the whole thing.",
-    iconName: "Zap"
+    id: "web-apps",
+    title: "Web Apps & LMS Development",
+    description: "Custom web applications and software for the browser — learning management systems (LMS) with courses, quizzes and student dashboards, plus booking and membership portals.",
+    iconName: "GraduationCap"
   },
   {
-    id: "seo-setup",
-    title: "WordPress SEO Setup",
-    description: "I set up your WordPress site the right way for search engines — proper heading structure, schema markup, clean URLs, and a solid Yoast or RankMath configuration.",
+    id: "seo-speed",
+    title: "SEO & Speed Optimization",
+    description: "Technical SEO that helps you rank: proper heading structure, schema markup, clean URLs, fast Core Web Vitals and a solid Yoast or Rank Math setup.",
     iconName: "Search"
   },
   {
-    id: "bug-fixes",
-    title: "WordPress Fixes & Troubleshooting",
-    description: "Plugin conflicts, broken layouts, a white screen of death — whatever's going wrong with your WordPress site, I'll find the cause and get it sorted fast.",
-    iconName: "Wrench"
+    id: "white-label",
+    title: "White Label Development for Agencies",
+    description: "I work quietly in the background on your client projects with full confidentiality. Your brand stays front and centre — nobody will ever know I was there.",
+    iconName: "ShieldCheck"
   }
 ];
 
+// Newest projects first: the carousel shows items in this order
 export const portfolioData: PortfolioItem[] = [
+  {
+    id: "jazba-host",
+    title: "Jazba Host",
+    category: "Web Design & Hosting Agency",
+    description: "Custom-coded website for a UK web design and hosting company, presenting fixed-price website builds, managed hosting plans and a simple quote request flow.",
+    image: "/assets/images/portfolio/jazba-host-website.webp",
+    tags: ["React", "Pricing Pages", "Quote Funnel"],
+    demoUrl: "https://www.jazbahost.com/",
+    scope: "Custom Web Build",
+    builtWith: "React"
+  },
+  {
+    id: "jazba-studio",
+    title: "Jazba Studio",
+    category: "Recording & Production Studio",
+    description: "Studio website for a recording, live-tracking and editing facility in Lahore, with room showcases, film equipment rental and studio booking calls to action.",
+    image: "/assets/images/portfolio/jazba-studio-wordpress-website.webp",
+    tags: ["Elementor", "Studio Booking", "Dark UI"],
+    demoUrl: "https://jazba.studio/",
+    scope: "Studio Website"
+  },
+  {
+    id: "ga-healthcare-training",
+    title: "GA Healthcare Training",
+    category: "Healthcare Training Provider",
+    description: "Training website for an American Heart Association course provider in Lilburn, Georgia, covering BLS, ACLS, PALS and Heartsaver classes with a class calendar and program registration.",
+    image: "/assets/images/portfolio/ga-healthcare-training-wordpress-website.webp",
+    tags: ["Gutenberg", "Course Calendar", "Local SEO"],
+    demoUrl: "https://gahealthcaretraining.com/",
+    scope: "Education Website"
+  },
+  {
+    id: "jazba-entertainment",
+    title: "Jazba Entertainment",
+    category: "Music, Film & Live Events",
+    description: "Brand website for a music, film and live events company, presenting studio sessions, artist management, events and ticketing with bold event-style visuals.",
+    image: "/assets/images/portfolio/jazba-entertainment-wordpress-website.webp",
+    tags: ["Gutenberg", "Events", "Artist Booking"],
+    demoUrl: "https://jazbaentertainment.com/",
+    scope: "Brand Website"
+  },
+  {
+    id: "jazba-tickets",
+    title: "Jazba Tickets",
+    category: "Event Ticketing Platform",
+    description: "Pre-launch website for a ticketing platform covering concerts, theatre, comedy, sport and festivals, with an email waitlist and artist booking features.",
+    image: "/assets/images/portfolio/jazba-tickets-website.webp",
+    tags: ["React", "Waitlist Capture", "Launch Page"],
+    demoUrl: "https://jazbatickets.com/",
+    scope: "Custom Web Build",
+    builtWith: "React"
+  },
+  {
+    id: "abc-crane-hire",
+    title: "ABC Crane Hire",
+    category: "Crane Hire Company",
+    description: "Service website for a Perth crane hire company covering Franna, Tom Thumb, Hiab and mobile cranes, with location pages and contact details always one tap away.",
+    image: "/assets/images/portfolio/abc-crane-hire-wordpress-website.webp",
+    tags: ["Elementor", "Rank Math SEO", "Location Pages"],
+    demoUrl: "https://abccranehire.com.au/",
+    scope: "Local Service Website"
+  },
+  {
+    id: "psg-business-consulting",
+    title: "PSG Business Consulting",
+    category: "Business Management Consultancy",
+    description: "Website for a Perth and Mandurah business management consultancy that helps WA small business owners, with advisory services, group coaching and free consultation booking.",
+    image: "/assets/images/portfolio/psg-business-consulting-wordpress-website.webp",
+    tags: ["WordPress", "Lead Generation", "Local SEO"],
+    demoUrl: "https://psgwa.com.au/",
+    scope: "Consulting Website"
+  },
+  {
+    id: "brightway-consult-solutions",
+    title: "Brightway Consult Solutions",
+    category: "HR & Business Consulting",
+    description: "Corporate website for a consulting and HR recruiting firm offering recruitment, workforce development, education, technology and eCommerce services.",
+    image: "/assets/images/portfolio/brightway-consult-solutions-wordpress-website.webp",
+    tags: ["Elementor", "Service Pages", "Quote Requests"],
+    demoUrl: "https://brightwayconsultsolutions.com/",
+    scope: "Corporate Website"
+  },
+  {
+    id: "brightway-group",
+    title: "Brightway Group",
+    category: "Group of Companies",
+    description: "Parent-brand website for a group of companies spanning consulting, HR, education, technology, publishing and international commerce.",
+    image: "/assets/images/portfolio/brightway-group-wordpress-website.webp",
+    tags: ["Elementor", "Multi-Brand", "Corporate Design"],
+    demoUrl: "https://brightwaygroup.org/",
+    scope: "Corporate Website"
+  },
+  {
+    id: "dr-ransford-addo",
+    title: "Dr. Ransford M. K. Addo",
+    category: "Author & Change Practitioner",
+    description: "Personal brand website for an author and organizational development practitioner, featuring his books, events and speaking enquiries.",
+    image: "/assets/images/portfolio/dr-ransford-addo-wordpress-website.webp",
+    tags: ["Elementor", "Book Showcase", "Personal Brand"],
+    demoUrl: "https://ransfordaddo.com/",
+    scope: "Author Website"
+  },
+  {
+    id: "fijian-real-estate",
+    title: "Fijian Real Estate",
+    category: "Property Marketplace",
+    description: "Property marketplace for buying and selling real estate in Fiji, with international listings, property search and an English/Chinese language switcher.",
+    image: "/assets/images/portfolio/fijian-real-estate-wordpress-website.webp",
+    tags: ["Gutenberg", "Property Listings", "Multilingual"],
+    demoUrl: "https://fijianrealestate.com/",
+    scope: "Real Estate Website"
+  },
+  {
+    id: "myrentfiji",
+    title: "myRent Fiji",
+    category: "Rental Property Platform",
+    description: "Rental platform for Fiji landlords and tenants with property search, tenant checks, digital signing and rent payment tracking.",
+    image: "/assets/images/portfolio/myrentfiji-wordpress-website.webp",
+    tags: ["Gutenberg", "Property Search", "Landlord Tools"],
+    demoUrl: "https://myrentfiji.com/",
+    scope: "Rental Platform"
+  },
+  {
+    id: "tvdm-digital-marketing",
+    title: "TVDM Digital Marketing",
+    category: "Digital Marketing Agency",
+    description: "Website for a Perth digital marketing agency offering web design, SEO, local search, digital advertising, AI chatbots and lead generation.",
+    image: "/assets/images/portfolio/tvdm-digital-marketing-wordpress-website.webp",
+    tags: ["WooCommerce", "SEO Services", "Lead Generation"],
+    demoUrl: "https://tvdm.au/",
+    scope: "Agency Website"
+  },
   {
     id: "project-1",
     title: "Arch Dermatology Center",
@@ -116,16 +251,6 @@ export const portfolioData: PortfolioItem[] = [
     tags: ["Directory Setup", "Core Blocks", "Contrast Compliance"],
     demoUrl: "https://caisd.africa/",
     scope: "White-Label Development"
-  },
-  {
-    id: "project-7",
-    title: "Jazba Creative Studio",
-    category: "Film & Visual Production",
-    description: "A dark-ambient portfolio styled to showcase high-resolution cinematic videos smoothly using lightweight viewport lazy-loads.",
-    image: "/assets/images/portfolio/jazba-creative-studio-wordpress-website.webp",
-    tags: ["Media Delivery", "GSAP Hooks", "Theme Tuning"],
-    demoUrl: "https://jazba.studio/",
-    scope: "Portfolio Development"
   },
   {
     id: "project-8",
@@ -452,51 +577,56 @@ export const testimonialsData: Testimonial[] = [
 export const faqData: FAQItem[] = [
   {
     id: 1,
-    question: "Do you work with businesses directly, or only with agencies?",
-    answer: "Both. I build WordPress websites for businesses of all sizes and also work as a behind-the-scenes developer for agencies who need someone reliable to handle their client projects. Either way, the process is the same — straightforward communication and clean work delivered on time.",
+    question: "Do you only work with WordPress?",
+    answer: "No. WordPress is a big part of what I do, but I also build Shopify stores, custom-coded websites and web apps, learning management systems (LMS), and custom WordPress plugins and themes. I'll recommend the platform that fits your project instead of forcing everything into one tool.",
   },
   {
     id: 2,
-    question: "How does white label WordPress development work?",
-    answer: "You bring the client, I handle the build — quietly, under your brand. I join whatever communication channel you use (Slack, WhatsApp, email), deliver the work as if I'm part of your team, and your client never knows I was involved. Everything stays fully confidential.",
+    question: "Do you work with businesses directly, or only with agencies?",
+    answer: "Both. I build websites for businesses of all sizes and also work as a behind-the-scenes developer for agencies who need someone reliable to handle their client projects. Either way, the process is the same — straightforward communication and clean work delivered on time.",
   },
   {
     id: 3,
+    question: "How does white label web development work?",
+    answer: "You bring the client, I handle the build — quietly, under your brand. I join whatever communication channel you use (Slack, WhatsApp, email), deliver the work as if I'm part of your team, and your client never knows I was involved. Everything stays fully confidential.",
+  },
+  {
+    id: 4,
     question: "Do you use Elementor or build custom WordPress themes?",
     answer: "Both, depending on what the project actually needs. For most builds I use Elementor Pro because clients find it easy to manage themselves after handover. For projects that need something leaner and faster, I build with Gutenberg or a lightweight custom theme. I'll tell you which approach makes more sense once I understand the project.",
   },
   {
-    id: 4,
-    question: "How much does a WordPress website cost?",
-    answer: "It depends on what you need. A simple business website is very different from a full WooCommerce store or a custom-designed build. I give flat-rate quotes once I know the scope — no hourly billing, no surprise charges at the end. Just tell me what you need and I'll send a clear number.",
-  },
-  {
     id: 5,
-    question: "How long does it take to build a WordPress website?",
-    answer: "Most standard WordPress websites take around 1–2 weeks. Larger builds, WooCommerce stores, or anything with a lot of custom design work may take a bit longer. I'll give you a realistic timeline before starting and stick to it — deadlines matter to me.",
+    question: "How much does a website cost?",
+    answer: "It depends on what you need. A simple business website is very different from a Shopify or WooCommerce store, a custom plugin or a web app like an LMS. I give flat-rate quotes once I know the scope — no hourly billing, no surprise charges at the end. Just tell me what you need and I'll send a clear number.",
   },
   {
     id: 6,
+    question: "How long does it take to build a website?",
+    answer: "Most standard WordPress and Shopify websites take around 1–2 weeks. Larger builds, online stores, custom plugins and web apps like an LMS take longer. I'll give you a realistic timeline before starting and stick to it — deadlines matter to me.",
+  },
+  {
+    id: 7,
     question: "What if something needs fixing after the site goes live?",
     answer: "I stay available after launch. If something breaks, a plugin causes a conflict, the site slows down, or you just need a small change — reach out and I'll get it sorted. I don't hand over a site and disappear.",
   },
   {
-    id: 7,
+    id: 8,
     question: "Do you sign NDAs or non-disclosure agreements?",
     answer: "Yes, always happy to. Most agencies I work with require an NDA before sharing any project details, and I sign without hesitation. Confidentiality isn't just a policy for me — it's how I've built trust with every agency I work with long-term.",
   },
   {
-    id: 8,
+    id: 9,
     question: "Will you ever contact my client directly?",
     answer: "Never, unless you explicitly want me to. In white-label work, I stay completely behind the scenes — no direct contact, no branding with my name, no risk of your client finding out I was involved. Your agency stays the single point of contact, always.",
   },
   {
-    id: 9,
+    id: 10,
     question: "How do we communicate if we're in different time zones?",
     answer: "I keep flexible hours specifically to overlap with agencies and clients across the US, UK, Canada, UAE, Europe, and Australia. We'll agree on a communication window that works for both of us, and I respond fast even outside it — usually within a few hours.",
   },
   {
-    id: 10,
+    id: 11,
     question: "Do you offer ongoing maintenance after the site is live?",
     answer: "Yes. Many agencies and businesses keep me on for ongoing updates, small tweaks, and plugin maintenance after launch. We can set up a simple monthly retainer or just handle things as they come up — whatever fits your workflow.",
   },

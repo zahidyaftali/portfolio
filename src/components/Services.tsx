@@ -5,26 +5,26 @@
 
 import { servicesData } from "../data";
 import {
+  Code,
   Globe,
-  Layout,
   ShieldCheck,
   ShoppingBag,
-  Zap,
-  Wrench,
-  Sparkles,
+  Puzzle,
+  Palette,
+  GraduationCap,
   Search,
   LucideIcon
 } from "lucide-react";
 
 // Lucide icon dictionary lookup for safe dynamic rendering
 const iconMap: Record<string, LucideIcon> = {
+  Code: Code,
   Globe: Globe,
-  Layout: Layout,
   ShieldCheck: ShieldCheck,
   ShoppingBag: ShoppingBag,
-  Zap: Zap,
-  Wrench: Wrench,
-  Sparkles: Sparkles,
+  Puzzle: Puzzle,
+  Palette: Palette,
+  GraduationCap: GraduationCap,
   Search: Search,
 };
 
@@ -49,11 +49,11 @@ export default function Services() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="font-recoleta text-[44px] md:text-[56px] leading-[1.1] mb-5 font-normal tracking-normal text-primary-text">
-            How I can help you
+            Web development services
           </h2>
           <div className="h-1 w-12 bg-primary-blue mx-auto mb-5 rounded"></div>
           <p className="font-sans text-[17px] sm:text-[19px] leading-[28px] text-secondary-text">
-            From custom builds and WooCommerce stores to speed fixes and SEO setup — here's everything I do in WordPress.
+            WordPress, Shopify or fully custom code — from business websites and online stores to custom plugins, themes, LMS platforms and SEO.
           </p>
         </div>
 
@@ -69,6 +69,8 @@ export default function Services() {
               const replacements: Record<string, string> = {
                 "wordpress": "WordPress",
                 "woocommerce": "WooCommerce",
+                "shopify": "Shopify",
+                "lms": "LMS",
                 "elementor": "Elementor",
                 "figma": "Figma",
                 "seo": "SEO",

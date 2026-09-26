@@ -34,7 +34,7 @@ export default function CTA({ onOpenContact }: CTAProps) {
           
           {/* CTA Heading - 36px to 52px scalable typography, bright white text */}
           <h2 className="font-recoleta text-white text-[44px] md:text-[56px] leading-[1.1] mb-6 font-normal tracking-normal">
-            Ready to get your WordPress project done?
+            Ready to get your web project done?
           </h2>
 
           {/* CTA Subheading - premium white text */}

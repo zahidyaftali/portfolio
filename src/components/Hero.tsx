@@ -38,14 +38,15 @@ export default function Hero({ onOpenContact }: HeroProps) {
 
             {/* Main Heading Heading */}
             <h1 className="text-white mb-6 font-recoleta text-[53px] sm:text-[65px] leading-[1.1] font-normal tracking-normal">
-              Need a white-label{" "}
-              <span className="text-white">WordPress developer</span>?
+              Need a freelance{" "}
+              <span className="text-white">web developer</span>?
             </h1>
 
             {/* Subheading Subtitle */}
             <p className="text-lg sm:text-xl text-blue-50/90 leading-relaxed max-w-2xl mb-10 font-sans">
-              I build clean, fast white-label WordPress websites for agencies
-              and businesses. Good communication, on-time delivery, no stress.
+              I build fast, SEO-ready WordPress, Shopify and custom websites
+              for agencies and businesses. Good communication, on-time
+              delivery, no stress.
             </p>
 
             {/* CTA Actions */}

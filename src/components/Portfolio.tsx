@@ -30,7 +30,7 @@ function ProjectCard({ project, isCopy }: { project: PortfolioItem; isCopy: bool
         sizes={IMAGE_SIZES}
         width={960}
         height={640}
-        alt={isCopy ? "" : `${project.title} – ${project.category} WordPress website`}
+        alt={isCopy ? "" : `${project.title} – ${project.category} ${project.builtWith ?? "WordPress"} website`}
         className="w-full h-full object-contain bg-[#3F58E0] transition-transform duration-500 scale-100 group-hover:scale-[1.03]"
         loading="lazy"
         decoding="async"
@@ -47,9 +47,9 @@ function ProjectCard({ project, isCopy }: { project: PortfolioItem; isCopy: bool
 }
 
 export default function Portfolio() {
-  const halfway = Math.ceil(portfolioData.length / 2);
-  const row1Base = portfolioData.slice(0, halfway);
-  const row2Base = portfolioData.slice(halfway);
+  // Alternate projects between the two rows so the newest (first in portfolioData) lead both rows
+  const row1Base = portfolioData.filter((_, idx) => idx % 2 === 0);
+  const row2Base = portfolioData.filter((_, idx) => idx % 2 === 1);
 
   // Duplicate items to ensure a seamless infinite wrapping transition width
   const row1Items = [...row1Base, ...row1Base];
@@ -62,10 +62,10 @@ export default function Portfolio() {
         {/* Section Header styled exactly like premium layout page */}
         <div className="text-left max-w-3xl">
           <h2 className="font-recoleta text-[44px] md:text-[56px] leading-[1.1] mb-5 font-normal tracking-normal">
-            WordPress projects I've built
+            Websites and web apps I've built
           </h2>
           <p className="font-sans text-[17px] sm:text-[19px] leading-[28px] text-secondary-text mb-8">
-            A look at some of the WordPress websites I've built for businesses, agencies, and clients across different industries. Every project here was designed, developed, and delivered by me.
+            A look at some of the WordPress and custom-coded websites I've built for businesses, agencies, and clients across different industries. Every project here was designed, developed, and delivered by me.
           </p>
           <a
             href="https://calendly.com/zahidyaftali/new-meeting"

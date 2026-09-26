@@ -17,7 +17,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     agencyName: "",
     website: "",
     email: "",
-    projectType: "Full WordPress Build",
+    projectType: "Custom Website",
     timeline: "ASAP",
     message: "",
   });
@@ -49,12 +49,13 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
   };
 
   const projectTypes = [
-    "Full WordPress Build",
-    "Elementor Page Design",
+    "Custom Website",
+    "WordPress Website",
+    "Shopify Store",
+    "Custom Plugin or Theme",
+    "Web App / LMS",
+    "SEO & Speed Optimization",
     "White-Label Agency Support",
-    "WooCommerce Development",
-    "PageSpeed speed optimization",
-    "Bug Fixes & Security Setup",
   ];
 
   return (

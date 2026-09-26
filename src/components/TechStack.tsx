@@ -170,7 +170,7 @@ export default function TechStack() {
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-6">
           <div className="text-left">
             <h2 className="font-recoleta text-[44px] md:text-[56px] leading-[1.1] mb-2 font-normal tracking-normal text-primary-text">
-              Plugins I use on every project
+              WordPress plugins I use most
             </h2>
             <p className="font-sans text-[17px] sm:text-[19px] leading-[28px] text-secondary-text mt-2">
               These are the WordPress plugins I reach for on most builds — tools I know inside out.

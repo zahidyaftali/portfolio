@@ -29,7 +29,7 @@ export default function FAQ() {
               Frequently asked questions
             </h2>
             <p className="font-sans text-[17px] sm:text-[19px] leading-[28px] text-secondary-text">
-              Common questions about how I work, what I build, and what to expect when you hire me for a WordPress project.
+              Common questions about how I work, what I build, and what to expect when you hire me for a web development project.
             </p>
           </div>
 

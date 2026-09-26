@@ -19,6 +19,8 @@ export interface PortfolioItem {
   tags: string[];
   demoUrl?: string;
   scope?: string;
+  /** Platform named in the image alt text; defaults to "WordPress" */
+  builtWith?: string;
 }
 
 export interface ProcessStep {

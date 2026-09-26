@@ -259,7 +259,7 @@ export default function Testimonials() {
             What clients say about me
           </h2>
           <p className="font-sans text-[17px] sm:text-[19px] leading-[28px] text-secondary-text mb-8">
-            Honest words from agency founders, business owners, and marketing professionals I've worked with on WordPress projects.
+            Honest words from agency founders, business owners, and marketing professionals I've worked with on web development projects.
           </p>
 
           {/* Fiverr Level 2 Seller Badge */}

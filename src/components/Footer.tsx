@@ -60,12 +60,12 @@ export default function Footer() {
                   <span className="font-serif text-[26px] leading-none text-primary-blue font-normal">.</span>
                 </a>
                 <span className="text-[11px] sm:text-xs font-medium text-gray-400 tracking-wide border-t sm:border-t-0 sm:border-l border-white/10 pt-0.5 sm:pt-0 sm:pl-3 uppercase">
-                  WordPress Developer
+                  Web Developer
                 </span>
               </div>
 
               <p className="text-sm text-gray-400 leading-relaxed max-w-sm mb-5">
-                Dedicated WordPress developer for agencies and businesses around the world. Clean builds, honest communication, and always on time.
+                Freelance web developer building WordPress, Shopify and custom websites for agencies and businesses around the world. Clean builds, honest communication, and always on time.
               </p>
             </div>
 
@@ -135,7 +135,7 @@ export default function Footer() {
             &copy; {currentYear} Zahid Ali Yaftali. All rights reserved.
           </p>
           <p className="text-xs text-gray-400 flex items-center gap-1.5 justify-center text-center sm:text-right">
-            Built with <Heart className="h-3 w-3 text-red-500 fill-current" /> for WordPress
+            Built with <Heart className="h-3 w-3 text-red-500 fill-current" /> for the web
           </p>
         </div>
 

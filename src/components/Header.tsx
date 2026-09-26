@@ -59,7 +59,7 @@ export default function Header({ onOpenBookCall }: HeaderProps) {
               <span className="font-serif text-[26px] leading-none text-primary-blue">.</span>
             </a>
             <span className="text-[11px] sm:text-xs font-medium text-secondary-text tracking-wide border-t sm:border-t-0 sm:border-l border-border-custom pt-0.5 sm:pt-0 sm:pl-3 uppercase">
-              WordPress Developer
+              Web Developer
             </span>
           </div>
 

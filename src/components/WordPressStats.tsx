@@ -53,14 +53,14 @@ export default function WordPressStats() {
       target: 150,
       suffix: "+",
       decimals: 0,
-      label: "Custom WordPress websites built and handed over to happy clients.",
+      label: "Websites built and handed over to happy clients — WordPress, Shopify and custom.",
     },
     {
       id: 2,
       target: 3,
       suffix: "",
       decimals: 0,
-      label: "Agencies trust me as their dedicated white-label WordPress developer.",
+      label: "Agencies trust me as their dedicated white-label web developer.",
     },
     {
       id: 3,

@@ -46,7 +46,7 @@ export default function App() {
 
       <div className="border-t border-border-custom w-full" />
 
-      {/* WordPress & WooCommerce Stats Section */}
+      {/* Stats Section */}
       <WordPressStats />
 
       {/* Trust Elements Section */}
@@ -104,7 +104,8 @@ export default function App() {
               <p className="text-sm sm:text-base text-secondary-text leading-relaxed mb-8">
                 If you're an agency looking for a reliable white-label
                 developer, or a business owner who needs a professional
-                WordPress website, I'm ready to help.
+                website — WordPress, Shopify or custom-built — I'm ready to
+                help.
               </p>
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                 <a
