@@ -50,26 +50,25 @@ export default function TechStack() {
           </p>
         </div>
 
-        <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
+        <ul className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 gap-3 sm:gap-4">
           {stack.map((item) => (
             <li
               key={item.name}
-              className="flex flex-col items-center gap-3 rounded-[16px] bg-white border border-[#e5e7eb] px-3 py-5 text-center card-shadow"
+              // Icons only: the name stays in the alt text (search engines, screen readers) and shows on hover
+              title={item.name}
+              className="flex items-center justify-center rounded-[16px] bg-white border border-[#e5e7eb] p-3 sm:p-5 card-shadow"
             >
               <img
                 src={item.iconUrl}
                 alt={`${item.name} logo`}
-                width={56}
-                height={56}
-                className={`h-14 w-14 rounded-xl bg-white shadow-sm border border-gray-100 ${
+                width={64}
+                height={64}
+                className={`h-11 w-11 sm:h-16 sm:w-16 rounded-xl bg-white shadow-sm border border-gray-100 ${
                   item.logo ? "object-contain p-2" : "object-cover"
                 }`}
                 loading="lazy"
                 decoding="async"
               />
-              <span className="font-sans text-[13px] sm:text-[14px] font-semibold leading-tight text-primary-text">
-                {item.name}
-              </span>
             </li>
           ))}
         </ul>
