@@ -36,7 +36,10 @@ In the browser, `src/main.tsx` hydrates the prerendered HTML instead of renderin
 | Structured data (Person, WebSite, FAQPage) and sitemap | `src/seo.ts` |
 | Services, portfolio projects, FAQs | `src/data.ts` |
 | Images, served from `/assets/images/` | `public/assets/images/` |
-| `robots.txt`, favicon, web manifest | `public/` |
+| `robots.txt`, `llms.txt` (site summary for AI search tools), favicon, web manifest | `public/` |
+| Self-hosted fonts (declared in `src/index.css`, preloaded in `index.html`) | `public/assets/fonts/` |
 | Hosting config (build command, cache headers) | `vercel.json` |
 
 Each portfolio screenshot has two files: `<name>.webp` at 960px wide and `<name>-480.webp` at 480px wide. To add a project, add both files and a new entry in `portfolioData`.
+
+Images are cached by browsers for a year, so when you replace an image, save it under a new filename instead of overwriting the old one.

@@ -13,7 +13,6 @@ const testimonials = [
     country: "United States",
     flag: "🇺🇸",
     text: "This guy is great, he goes above and beyond, it was a tough project and it took longer than expected but he came through, his communication was also excellent! Great freelancer!",
-    image: "/assets/images/avatars/client-avatar-1.webp",
     role: "Fiverr Client"
   },
   {
@@ -42,7 +41,6 @@ const testimonials = [
     country: "United States",
     flag: "🇺🇸",
     text: "I had an exceptional experience working with Zahid A on my website design project! His professionalism shines through in his work, delivering on time with proactive communication and politeness throughout. I could not have asked for better service—truly a pleasure to work with!",
-    image: "/assets/images/avatars/client-avatar-2.webp",
     role: "E-commerce Founder"
   },
   {
@@ -92,7 +90,6 @@ const testimonials = [
     country: "United States",
     flag: "🇺🇸",
     text: "It's been a wonderful experience working with Zahid! He designed a perfect website for my new organization that exceeded my expectations. The colors, the imagery, and the responsiveness of the site itself have exceeded my expectations. I highly recommend anyone to work with Zahid. He is also super responsive to inquiries and changes.",
-    image: "/assets/images/avatars/client-avatar-3.webp",
     role: "Organization Director"
   },
   {
@@ -100,7 +97,6 @@ const testimonials = [
     country: "United States",
     flag: "🇺🇸",
     text: "I have not used Fiverr in some time but my experience with Zahid was one of the best I’ve ever had. He did a truly good job of working with me. He was accommodating, professional, and helpful throughout the process.",
-    image: "/assets/images/avatars/client-avatar-4.webp",
     role: "Fiverr Client"
   },
   {
@@ -108,7 +104,6 @@ const testimonials = [
     country: "Ireland",
     flag: "🇮🇪",
     text: "Outstanding experience! This freelancer has incredible attention to detail and a deep understanding of the work. They exceeded my expectations and went above and beyond to deliver a result better than I imagined. Highly professional, proactive, and easy to work with. I’d definitely recommend them!",
-    image: "/assets/images/avatars/client-avatar-5.webp",
     role: "Agency Lead"
   },
   {
@@ -130,7 +125,6 @@ const testimonials = [
     country: "Netherlands",
     flag: "🇳🇱",
     text: "We are extremely satisfied with our website designer! He responds quickly, listens carefully to our wishes, and adjusts everything exactly as we want. No request is too much, and he only finalizes things when we are completely satisfied. This gives a reassuring and reliable feeling.",
-    image: "/assets/images/avatars/client-avatar-6.webp",
     role: "Director"
   },
   {
@@ -201,7 +195,7 @@ export function TestimonialsColumn(props: {
         {[
           ...new Array(hydrated ? 2 : 1).fill(0).map((_, index) => (
             <React.Fragment key={index}>
-              {props.testimonials.map(({ text, image, name, role, flag, country }, i) => (
+              {props.testimonials.map(({ text, name, flag, country }, i) => (
                 <div
                   className="p-8 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-md transition-all duration-300 max-w-xs sm:max-w-sm w-full flex flex-col justify-between"
                   key={`${index}-${i}`}
@@ -213,21 +207,10 @@ export function TestimonialsColumn(props: {
                   </p>
                   
                   <div className="flex items-center gap-3 mt-6 pt-4 border-t border-gray-50">
-                    {image ? (
-                      <img
-                        width={40}
-                        height={40}
-                        src={image}
-                        alt=""
-                        className="h-10 w-10 rounded-full object-cover border border-primary-blue/20"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                    ) : (
-                      <div className="h-10 w-10 rounded-full bg-[#f0f4fd] text-primary-blue flex items-center justify-center font-bold text-sm tracking-tight border border-primary-blue/15 select-none shrink-0">
-                        {name.charAt(0).toUpperCase()}
-                      </div>
-                    )}
+                    {/* Initials instead of photos: these are real Fiverr reviews and we have no photos of the reviewers */}
+                    <div className="h-10 w-10 rounded-full bg-[#f0f4fd] text-primary-blue flex items-center justify-center font-bold text-sm tracking-tight border border-primary-blue/15 select-none shrink-0" aria-hidden="true">
+                      {name.charAt(0).toUpperCase()}
+                    </div>
                     <div className="flex flex-col min-w-0">
                       <div className="flex items-center gap-1.5 min-w-0">
                         <span className="text-sm shrink-0" aria-hidden="true">
@@ -237,7 +220,7 @@ export function TestimonialsColumn(props: {
                           {name}
                         </span>
                       </div>
-                      <span className="font-sans text-[11px] text-gray-400 font-medium tracking-wider uppercase mt-0.5">
+                      <span className="font-sans text-[11px] text-gray-500 font-medium tracking-wider uppercase mt-0.5">
                         {country}
                       </span>
                     </div>
@@ -274,7 +257,7 @@ export default function Testimonials() {
             className="inline-flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 bg-white px-5 py-3 rounded-full border border-gray-200/80 shadow-[0_2px_10px_-3px_rgba(0,0,0,0.05)] mx-auto hover:border-primary-blue/35 hover:shadow-[0_4px_16px_-3px_rgba(63,88,224,0.1)] transition-all duration-300 cursor-pointer select-none group"
           >
             <div className="flex items-center gap-2">
-              <span className="text-[#00B22D] font-extrabold text-[13px] tracking-tight bg-[#E6F8ED] px-2.5 py-0.5 rounded border border-[#00B22D]/15 font-sans transition-colors duration-200 group-hover:bg-[#00B22D] group-hover:text-white-force group-hover:text-white">
+              <span className="text-[#007A20] font-extrabold text-[13px] tracking-tight bg-[#E6F8ED] px-2.5 py-0.5 rounded border border-[#007A20]/15 font-sans transition-colors duration-200 group-hover:bg-[#007A20] group-hover:text-white">
                 fiverr
               </span>
               <span className="text-[11px] font-bold text-gray-500 uppercase tracking-widest">
@@ -293,7 +276,7 @@ export default function Testimonials() {
               <span className="text-[13px] font-bold text-gray-800 leading-none select-none">
                 4.9<span className="sr-only"> out of 5 stars</span>
               </span>
-              <span className="text-[11px] font-medium text-gray-400 leading-none select-none">
+              <span className="text-[11px] font-medium text-gray-500 leading-none select-none">
                 (91 reviews)
               </span>
             </div>

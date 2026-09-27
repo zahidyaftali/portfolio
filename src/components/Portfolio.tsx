@@ -68,7 +68,7 @@ export default function Portfolio() {
             Websites and web apps I've built
           </h2>
           <p className="font-sans text-[17px] sm:text-[19px] leading-[28px] text-secondary-text mb-8">
-            A look at some of the WordPress and custom-coded websites I've built for businesses, agencies, and clients across different industries. Every project here was designed, developed, and delivered by me.
+            A look at some of the websites and web apps I've built for businesses and agencies in healthcare, real estate, construction, logistics, hospitality, finance, education and more. Every project here was designed, developed, and delivered by me.
           </p>
           <a
             href="https://calendly.com/zahidyaftali/new-meeting"

@@ -33,10 +33,9 @@
     <link rel="apple-touch-icon" href="/assets/images/icons/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <!-- Fonts: preconnect + link (not a CSS @import) so they don't block rendering behind the stylesheet -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:ital,opsz,wght@0,14..32,400..800;1,14..32,400&display=swap" />
+    <!-- Self-hosted fonts (@font-face in src/index.css): preload the two the first screen uses -->
+    <link rel="preload" href="/assets/fonts/fraunces-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/inter-latin-variable.woff2" as="font" type="font/woff2" crossorigin />
   </head>
   <body>
     <div id="root"></div>

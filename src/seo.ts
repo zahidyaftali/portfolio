@@ -13,7 +13,21 @@ export const SITE_URL = "https://www.zahidyaftali.com";
 const HOME_URL = `${SITE_URL}/`;
 const absolute = (path: string) => new URL(path, SITE_URL).href;
 
-export function structuredData() {
+// Profiles that confirm who runs this site (entity "sameAs" links)
+const PROFILES = [
+  "https://www.fiverr.com/s/WEaRoRd",
+  "https://www.upwork.com/freelancers/~010aee81b1f75b3cac",
+  "https://github.com/zahidyaftali",
+];
+
+interface PageMeta {
+  title: string;
+  description: string;
+  /** YYYY-MM-DD of the build */
+  dateModified: string;
+}
+
+export function structuredData({ title, description, dateModified }: PageMeta) {
   return {
     "@context": "https://schema.org",
     "@graph": [
@@ -26,10 +40,7 @@ export function structuredData() {
         description:
           "Freelance web developer with 5+ years of experience building any kind of website: custom-coded sites and web apps, WordPress, Shopify and other CMS platforms, plugins, themes and LMS platforms.",
         email: "mailto:zahidyaftali999@gmail.com",
-        sameAs: [
-          "https://www.fiverr.com/s/WEaRoRd",
-          "https://www.upwork.com/freelancers/~010aee81b1f75b3cac",
-        ],
+        sameAs: PROFILES,
         knowsAbout: [
           "Web development",
           "Custom website development",
@@ -69,10 +80,7 @@ export function structuredData() {
         // Country from the +92 WhatsApp number shown on the site
         address: { "@type": "PostalAddress", addressCountry: "PK" },
         areaServed: ["United States", "United Kingdom", "Canada", "United Arab Emirates", "Europe", "Australia"],
-        sameAs: [
-          "https://www.fiverr.com/s/WEaRoRd",
-          "https://www.upwork.com/freelancers/~010aee81b1f75b3cac",
-        ],
+        sameAs: PROFILES,
         hasOfferCatalog: {
           "@type": "OfferCatalog",
           name: "Web development services",
@@ -99,9 +107,13 @@ export function structuredData() {
         "@type": ["WebPage", "FAQPage"],
         "@id": `${HOME_URL}#webpage`,
         url: HOME_URL,
+        name: title,
+        description,
+        dateModified,
         inLanguage: "en",
         isPartOf: { "@id": `${HOME_URL}#website` },
         about: { "@id": `${HOME_URL}#person` },
+        hasPart: { "@id": `${HOME_URL}#portfolio` },
         primaryImageOfPage: {
           "@type": "ImageObject",
           url: absolute("/assets/images/og-image.jpg"),
@@ -112,6 +124,24 @@ export function structuredData() {
           "@type": "Question",
           name: faq.question,
           acceptedAnswer: { "@type": "Answer", text: faq.answer },
+        })),
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${HOME_URL}#portfolio`,
+        name: "Websites and web apps built by Zahid Ali Yaftali",
+        numberOfItems: portfolioData.length,
+        itemListElement: portfolioData.map((project, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          item: {
+            "@type": "WebSite",
+            name: project.title,
+            url: project.demoUrl,
+            image: absolute(project.image),
+            description: project.description,
+            creator: { "@id": `${HOME_URL}#person` },
+          },
         })),
       },
     ],

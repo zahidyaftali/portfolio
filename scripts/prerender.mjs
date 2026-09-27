@@ -19,8 +19,15 @@ if (!html.includes(placeholder)) {
   throw new Error(`prerender: ${placeholder} not found in dist/index.html`);
 }
 
+// Title and description come from index.html so the structured data always matches the page
+const decode = (text) => text.replace(/&amp;/g, "&").replace(/&quot;/g, '"').replace(/&#39;/g, "'");
+const title = decode(html.match(/<title>([^<]*)<\/title>/)?.[1] ?? "");
+const description = decode(html.match(/<meta name="description" content="([^"]*)"/)?.[1] ?? "");
+if (!title || !description) throw new Error("prerender: <title> or meta description missing in index.html");
+const today = new Date().toISOString().slice(0, 10);
+
 // Escape "<" so the JSON can never close the <script> tag early
-const jsonLd = JSON.stringify(structuredData()).replace(/</g, "\\u003c");
+const jsonLd = JSON.stringify(structuredData({ title, description, dateModified: today })).replace(/</g, "\\u003c");
 
 // React writes a few attributes with their JSX spelling (srcSet, fetchPriority...).
 // Browsers treat HTML attribute names case-insensitively, so this only makes the
@@ -42,7 +49,7 @@ html = html
   .replace("</head>", `${toHtmlAttrs(headPreloads)}  <script type="application/ld+json">${jsonLd}</script>\n  </head>`);
 
 fs.writeFileSync(templatePath, html);
-fs.writeFileSync(path.join(distDir, "sitemap.xml"), sitemapXml(new Date().toISOString().slice(0, 10)));
+fs.writeFileSync(path.join(distDir, "sitemap.xml"), sitemapXml(today));
 fs.rmSync(ssrDir, { recursive: true, force: true });
 
 console.log(`prerender: wrote dist/index.html (${(Buffer.byteLength(html) / 1024).toFixed(1)} KB) and dist/sitemap.xml`);

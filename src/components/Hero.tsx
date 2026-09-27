@@ -29,7 +29,8 @@ export default function Hero({ onOpenContact }: HeroProps) {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[45%_55%] lg:gap-8">
           {/* Left Column: Content */}
-          <div className="flex flex-col justify-center animate-fade-in-up">
+          {/* No fade-in here: the H1 is the mobile LCP element, so it must be visible on first paint */}
+          <div className="flex flex-col justify-center">
             {/* Experience Badge */}
             <div className="inline-flex items-center gap-2 self-start rounded-full bg-white/10 px-4.5 py-1.5 text-xs font-semibold tracking-wider text-white uppercase mb-6 shadow-sm">
               <span className="flex h-2 w-2 rounded-full bg-[#10B981] animate-pulse-slow"></span>
@@ -83,8 +84,8 @@ export default function Hero({ onOpenContact }: HeroProps) {
                 {/* LCP image: fetched with high priority, sized to avoid layout shift */}
                 <img
                   src="/assets/images/hero-wordpress-dashboard-960.webp"
-                  srcSet="/assets/images/hero-wordpress-dashboard-640.webp 640w, /assets/images/hero-wordpress-dashboard-960.webp 960w, /assets/images/hero-wordpress-dashboard-1280.webp 1280w"
-                  sizes="(min-width: 1024px) 670px, 448px"
+                  srcSet="/assets/images/hero-wordpress-dashboard-640.webp 640w, /assets/images/hero-wordpress-dashboard-768.webp 768w, /assets/images/hero-wordpress-dashboard-960.webp 960w, /assets/images/hero-wordpress-dashboard-1280.webp 1280w"
+                  sizes="(min-width: 1024px) 670px, (min-width: 480px) 448px, calc(100vw - 32px)"
                   width={1280}
                   height={1016}
                   alt="WordPress block editor with site backup, server status and 99.999% uptime panels"

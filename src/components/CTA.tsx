@@ -18,16 +18,16 @@ export default function CTA({ onOpenContact }: CTAProps) {
       }}
     >
       
-      {/* Decorative Rising Graph Curve Overlay */}
-      <div 
-        className="absolute inset-0 pointer-events-none opacity-95 z-0"
-        style={{
-          backgroundImage: "url('/assets/images/cta-growth-graph.webp')",
-          backgroundPosition: "bottom right",
-          backgroundSize: "contain",
-          backgroundRepeat: "no-repeat"
-        }}
-      ></div>
+      {/* Decorative Rising Graph Curve Overlay (an <img> rather than a CSS background so it can lazy-load) */}
+      <img
+        src="/assets/images/cta-growth-graph.webp"
+        alt=""
+        width={1000}
+        height={639}
+        className="absolute inset-0 h-full w-full object-contain object-right-bottom pointer-events-none opacity-95 z-0"
+        loading="lazy"
+        decoding="async"
+      />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-[700px] text-left">

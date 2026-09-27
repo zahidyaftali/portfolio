@@ -105,7 +105,7 @@ export default function WordPressStats() {
                     </span>
                   </div>
                   {/* Clean label with generous spacing */}
-                  <p className="font-sans text-sm sm:text-[15px] text-gray-500 leading-relaxed mt-4">
+                  <p className="font-sans text-sm sm:text-[15px] text-gray-600 leading-relaxed mt-4">
                     {stat.label}
                   </p>
                 </div>
