@@ -20,6 +20,7 @@ import CTA from "./components/CTA";
 import Footer from "./components/Footer";
 import ContactModal from "./components/ContactModal";
 import WhatsAppWidget from "./components/WhatsAppWidget";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -154,6 +155,9 @@ export default function App() {
 
       {/* Floating WhatsApp Chat Widget */}
       <WhatsAppWidget />
+
+      {/* Vercel Web Analytics: cookieless page view counting (renders nothing) */}
+      <Analytics />
     </div>
   );
 }
