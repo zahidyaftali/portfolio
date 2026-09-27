@@ -537,7 +537,7 @@ export const faqData: FAQItem[] = [
   {
     id: 1,
     question: "Do you only work with WordPress?",
-    answer: "No. WordPress is a big part of what I do, but I also build Shopify stores, custom-coded websites and web apps, learning management systems (LMS), and custom WordPress plugins and themes. I'll recommend the platform that fits your project instead of forcing everything into one tool.",
+    answer: "No. I build any kind of website: custom-coded sites and web apps (React, PHP, HTML and CSS), WordPress, Shopify and other CMS platforms, plus learning management systems (LMS) and custom plugins and themes. I'll recommend the platform that fits your project instead of forcing everything into one tool.",
   },
   {
     id: 2,

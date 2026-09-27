@@ -53,7 +53,7 @@ export default function WordPressStats() {
       target: 150,
       suffix: "+",
       decimals: 0,
-      label: "Websites built and handed over to happy clients — WordPress, Shopify and custom.",
+      label: "Websites built and handed over to happy clients — custom, WordPress, Shopify and more.",
     },
     {
       id: 2,

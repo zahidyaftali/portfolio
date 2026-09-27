@@ -53,7 +53,7 @@ export default function Services() {
           </h2>
           <div className="h-1 w-12 bg-primary-blue mx-auto mb-5 rounded"></div>
           <p className="font-sans text-[17px] sm:text-[19px] leading-[28px] text-secondary-text">
-            WordPress, Shopify or fully custom code — from business websites and online stores to custom plugins, themes, LMS platforms and SEO.
+            Custom code, WordPress, Shopify or another CMS — from business websites and online stores to custom plugins, themes, LMS platforms and SEO.
           </p>
         </div>
 

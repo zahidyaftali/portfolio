@@ -1,6 +1,6 @@
 # portfolio
 
-Source for [zahidyaftali.com](https://www.zahidyaftali.com/), the portfolio of Zahid Ali Yaftali, a freelance web developer building WordPress, Shopify and custom websites, plugins, themes and LMS platforms. It's built with React, Vite and Tailwind CSS and prerendered to static HTML, so search engines see the full page without running JavaScript.
+Source for [zahidyaftali.com](https://www.zahidyaftali.com/), the portfolio of Zahid Ali Yaftali, a freelance web developer building any kind of website: custom-coded sites and web apps, WordPress, Shopify and other CMS platforms, plugins, themes and LMS platforms. It's built with React, Vite and Tailwind CSS and prerendered to static HTML, so search engines see the full page without running JavaScript.
 
 ## Run locally
 

@@ -44,9 +44,9 @@ export default function Hero({ onOpenContact }: HeroProps) {
 
             {/* Subheading Subtitle */}
             <p className="text-lg sm:text-xl text-blue-50/90 leading-relaxed max-w-2xl mb-10 font-sans">
-              I build fast, SEO-ready WordPress, Shopify and custom websites
-              for agencies and businesses. Good communication, on-time
-              delivery, no stress.
+              I build fast, SEO-ready websites of any kind — custom-coded,
+              WordPress, Shopify or another CMS — for agencies and businesses.
+              Good communication, on-time delivery, no stress.
             </p>
 
             {/* CTA Actions */}

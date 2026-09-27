@@ -3,23 +3,34 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-// A compact logo grid: no per-plugin headings or outbound links, so the page's
-// headings and links stay focused on my own services and projects
-const plugins = [
-  { name: "Yoast SEO", iconUrl: "/assets/images/plugins/yoast-seo.webp" },
-  { name: "Rank Math SEO", iconUrl: "/assets/images/plugins/rank-math-seo.webp" },
+// A compact logo grid: no per-item headings or outbound links, so the page's
+// headings and links stay focused on my own services and projects.
+// `logo` items are transparent brand marks shown with padding; the rest are square app icons.
+const stack = [
+  // Code
+  { name: "HTML5", iconUrl: "/assets/images/stack/html5.svg", logo: true },
+  { name: "CSS3", iconUrl: "/assets/images/stack/css3.svg", logo: true },
+  { name: "JavaScript", iconUrl: "/assets/images/stack/javascript.svg", logo: true },
+  { name: "React", iconUrl: "/assets/images/stack/react.svg", logo: true },
+  { name: "Tailwind CSS", iconUrl: "/assets/images/stack/tailwindcss.svg", logo: true },
+  { name: "PHP", iconUrl: "/assets/images/stack/php.svg", logo: true },
+  { name: "MySQL", iconUrl: "/assets/images/stack/mysql.svg", logo: true },
+  // Platforms
+  { name: "WordPress", iconUrl: "/assets/images/stack/wordpress.svg", logo: true },
+  { name: "Shopify", iconUrl: "/assets/images/stack/shopify.webp", logo: true },
+  { name: "WooCommerce", iconUrl: "/assets/images/plugins/woocommerce.webp" },
   { name: "Elementor Pro", iconUrl: "/assets/images/plugins/elementor-pro.webp" },
   { name: "Advanced Custom Fields", iconUrl: "/assets/images/plugins/advanced-custom-fields.svg" },
-  { name: "WooCommerce", iconUrl: "/assets/images/plugins/woocommerce.webp" },
-  { name: "WooCommerce Bookings", iconUrl: "/assets/images/plugins/woocommerce-bookings.webp" },
-  { name: "WooCommerce PayPal Payments", iconUrl: "/assets/images/plugins/woocommerce-paypal-payments.webp" },
-  { name: "YITH", iconUrl: "/assets/images/plugins/yith.webp" },
-  { name: "Gravity Forms", iconUrl: "/assets/images/plugins/gravity-forms.webp" },
-  { name: "WPForms", iconUrl: "/assets/images/plugins/wpforms.webp" },
+  { name: "Yoast SEO", iconUrl: "/assets/images/plugins/yoast-seo.webp" },
+  { name: "Rank Math SEO", iconUrl: "/assets/images/plugins/rank-math-seo.webp" },
+  // Tools
+  { name: "Figma", iconUrl: "/assets/images/stack/figma.svg", logo: true },
+  { name: "GitHub", iconUrl: "/assets/images/stack/github.svg", logo: true },
+  { name: "Vite", iconUrl: "/assets/images/stack/vitejs.svg", logo: true },
+  { name: "Vercel", iconUrl: "/assets/images/stack/vercel.svg", logo: true },
   { name: "LiteSpeed Cache", iconUrl: "/assets/images/plugins/litespeed-cache.webp" },
-  { name: "Jetpack", iconUrl: "/assets/images/plugins/jetpack.svg" },
   { name: "Site Kit by Google", iconUrl: "/assets/images/plugins/site-kit-by-google.webp" },
-  { name: "All-in-One WP Migration", iconUrl: "/assets/images/plugins/all-in-one-wp-migration.webp" },
+  { name: "Gravity Forms", iconUrl: "/assets/images/plugins/gravity-forms.webp" },
 ];
 
 export default function TechStack() {
@@ -32,30 +43,32 @@ export default function TechStack() {
 
         <div className="text-left max-w-3xl mb-10">
           <h2 className="font-recoleta text-[44px] md:text-[56px] leading-[1.1] mb-2 font-normal tracking-normal text-primary-text">
-            My WordPress stack
+            My work stack
           </h2>
           <p className="font-sans text-[17px] sm:text-[19px] leading-[28px] text-secondary-text mt-2">
-            The plugins I reach for on most WordPress builds — tools I know inside out.
+            The languages, platforms and tools I build with — from hand-coded React and PHP to WordPress, Shopify and other CMS platforms.
           </p>
         </div>
 
         <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-4">
-          {plugins.map((plugin) => (
+          {stack.map((item) => (
             <li
-              key={plugin.name}
+              key={item.name}
               className="flex flex-col items-center gap-3 rounded-[16px] bg-white border border-[#e5e7eb] px-3 py-5 text-center card-shadow"
             >
               <img
-                src={plugin.iconUrl}
-                alt={`${plugin.name} logo`}
+                src={item.iconUrl}
+                alt={`${item.name} logo`}
                 width={56}
                 height={56}
-                className="h-14 w-14 rounded-xl object-cover bg-white shadow-sm border border-gray-100"
+                className={`h-14 w-14 rounded-xl bg-white shadow-sm border border-gray-100 ${
+                  item.logo ? "object-contain p-2" : "object-cover"
+                }`}
                 loading="lazy"
                 decoding="async"
               />
               <span className="font-sans text-[13px] sm:text-[14px] font-semibold leading-tight text-primary-text">
-                {plugin.name}
+                {item.name}
               </span>
             </li>
           ))}

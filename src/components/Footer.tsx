@@ -65,7 +65,7 @@ export default function Footer() {
               </div>
 
               <p className="text-sm text-gray-400 leading-relaxed max-w-sm mb-5">
-                Freelance web developer building WordPress, Shopify and custom websites for agencies and businesses around the world. Clean builds, honest communication, and always on time.
+                Freelance web developer building custom, WordPress, Shopify and other CMS websites for agencies and businesses around the world. Clean builds, honest communication, and always on time.
               </p>
             </div>
 

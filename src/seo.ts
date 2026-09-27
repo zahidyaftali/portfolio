@@ -24,7 +24,7 @@ export function structuredData() {
         url: HOME_URL,
         jobTitle: "Freelance Web Developer",
         description:
-          "Freelance web developer with 5+ years of experience building WordPress, Shopify and custom websites, plugins, themes and LMS platforms for agencies and businesses.",
+          "Freelance web developer with 5+ years of experience building any kind of website: custom-coded sites and web apps, WordPress, Shopify and other CMS platforms, plugins, themes and LMS platforms.",
         email: "mailto:zahidyaftali999@gmail.com",
         sameAs: [
           "https://www.fiverr.com/s/WEaRoRd",
@@ -33,6 +33,13 @@ export function structuredData() {
         knowsAbout: [
           "Web development",
           "Custom website development",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "PHP",
+          "MySQL",
+          "Tailwind CSS",
+          "Content management systems (CMS)",
           "WordPress",
           "Shopify",
           "WooCommerce",
@@ -55,7 +62,7 @@ export function structuredData() {
         image: absolute("/assets/images/og-image.jpg"),
         logo: absolute("/assets/images/icons/icon-512.png"),
         description:
-          "Freelance web development: WordPress, Shopify and custom websites, custom plugins and themes, web apps and LMS platforms, and SEO for agencies and businesses.",
+          "Freelance web development for any kind of website: custom-coded sites and web apps, WordPress, Shopify and other CMS platforms, custom plugins and themes, LMS platforms and SEO.",
         founder: { "@id": `${HOME_URL}#person` },
         email: "zahidyaftali999@gmail.com",
         telephone: "+923472093083",
