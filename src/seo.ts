@@ -45,14 +45,39 @@ export function structuredData() {
           "Technical SEO",
           "Website speed optimization",
         ],
-        makesOffer: servicesData.map((service) => ({
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: service.title,
-            description: service.description,
-          },
-        })),
+      },
+      {
+        // No aggregateRating: Google ignores star markup for reviews a business publishes about itself
+        "@type": "ProfessionalService",
+        "@id": `${HOME_URL}#business`,
+        name: "Zahid Ali Yaftali – Web Development",
+        url: HOME_URL,
+        image: absolute("/assets/images/og-image.jpg"),
+        logo: absolute("/assets/images/icons/icon-512.png"),
+        description:
+          "Freelance web development: WordPress, Shopify and custom websites, custom plugins and themes, web apps and LMS platforms, and SEO for agencies and businesses.",
+        founder: { "@id": `${HOME_URL}#person` },
+        email: "zahidyaftali999@gmail.com",
+        telephone: "+923472093083",
+        // Country from the +92 WhatsApp number shown on the site
+        address: { "@type": "PostalAddress", addressCountry: "PK" },
+        areaServed: ["United States", "United Kingdom", "Canada", "United Arab Emirates", "Europe", "Australia"],
+        sameAs: [
+          "https://www.fiverr.com/s/WEaRoRd",
+          "https://www.upwork.com/freelancers/~010aee81b1f75b3cac",
+        ],
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Web development services",
+          itemListElement: servicesData.map((service) => ({
+            "@type": "Offer",
+            itemOffered: {
+              "@type": "Service",
+              name: service.title,
+              description: service.description,
+            },
+          })),
+        },
       },
       {
         "@type": "WebSite",

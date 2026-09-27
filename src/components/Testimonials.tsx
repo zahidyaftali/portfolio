@@ -5,6 +5,7 @@
 
 import React from "react";
 import { Star } from "lucide-react";
+import { useHydrated } from "../useHydrated";
 
 const testimonials = [
   {
@@ -188,14 +189,17 @@ export function TestimonialsColumn(props: {
   testimonials: typeof testimonials;
   duration?: number;
 }) {
+  // The loop needs each review twice; the copy is added only in the browser
+  // so the prerendered HTML contains every review once
+  const hydrated = useHydrated();
   return (
     <div className={props.className}>
       <div
-        className="flex flex-col gap-6 pb-6 bg-transparent animate-marquee-up"
+        className={`flex flex-col gap-6 pb-6 bg-transparent ${hydrated ? "animate-marquee-up" : ""}`}
         style={{ animationDuration: `${props.duration || 45}s` }}
       >
         {[
-          ...new Array(2).fill(0).map((_, index) => (
+          ...new Array(hydrated ? 2 : 1).fill(0).map((_, index) => (
             <React.Fragment key={index}>
               {props.testimonials.map(({ text, image, name, role, flag, country }, i) => (
                 <div
@@ -226,7 +230,7 @@ export function TestimonialsColumn(props: {
                     )}
                     <div className="flex flex-col min-w-0">
                       <div className="flex items-center gap-1.5 min-w-0">
-                        <span className="text-sm shrink-0" title={country} role="img" aria-label={country}>
+                        <span className="text-sm shrink-0" aria-hidden="true">
                           {flag}
                         </span>
                         <span className="font-sans font-semibold text-[14px] text-primary-text tracking-tight truncate">
@@ -281,16 +285,16 @@ export default function Testimonials() {
             <div className="hidden sm:block h-3.5 w-px bg-gray-200"></div>
 
             <div className="flex items-center gap-1.5">
-              <div className="flex items-center gap-0.5 text-[#FFB800]">
+              <div className="flex items-center gap-0.5 text-[#FFB800]" aria-hidden="true">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} className="h-3.5 w-3.5 fill-[#FFB800] stroke-[#FFB800]" />
                 ))}
               </div>
               <span className="text-[13px] font-bold text-gray-800 leading-none select-none">
-                4.9
+                4.9<span className="sr-only"> out of 5 stars</span>
               </span>
               <span className="text-[11px] font-medium text-gray-400 leading-none select-none">
-                (91 stars feedbacks)
+                (91 reviews)
               </span>
             </div>
           </a>

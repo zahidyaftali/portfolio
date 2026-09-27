@@ -58,409 +58,368 @@ export const servicesData: ServiceItem[] = [
   }
 ];
 
-// Newest projects first: the carousel shows items in this order
+// Newest projects first: the carousel shows items in this order.
+// Titles and categories are the real business names and niches; together they are the image alt text.
 export const portfolioData: PortfolioItem[] = [
   {
     id: "jazba-host",
     title: "Jazba Host",
-    category: "Web Design & Hosting Agency",
-    description: "Custom-coded website for a UK web design and hosting company, presenting fixed-price website builds, managed hosting plans and a simple quote request flow.",
+    category: "Web Design & Hosting Company, UK",
+    description: "Website for a UK web design and hosting company, presenting fixed-price website builds, managed hosting plans and a simple quote request flow.",
     image: "/assets/images/portfolio/jazba-host-website.webp",
-    tags: ["React", "Pricing Pages", "Quote Funnel"],
-    demoUrl: "https://www.jazbahost.com/",
-    scope: "Custom Web Build",
-    builtWith: "React"
+    tags: ["React", "Pricing Pages", "Quote Requests"],
+    demoUrl: "https://www.jazbahost.com/"
   },
   {
     id: "jazba-studio",
     title: "Jazba Studio",
-    category: "Recording & Production Studio",
-    description: "Studio website for a recording, live-tracking and editing facility in Lahore, with room showcases, film equipment rental and studio booking calls to action.",
-    image: "/assets/images/portfolio/jazba-studio-wordpress-website.webp",
-    tags: ["Elementor", "Studio Booking", "Dark UI"],
-    demoUrl: "https://jazba.studio/",
-    scope: "Studio Website"
+    category: "Recording Studio, Lahore",
+    description: "Studio website for a recording, live-tracking and editing facility in Lahore, with room showcases, film equipment rental and studio booking.",
+    image: "/assets/images/portfolio/jazba-studio-website.webp",
+    tags: ["WordPress", "Elementor", "Studio Booking"],
+    demoUrl: "https://jazba.studio/"
   },
   {
     id: "ga-healthcare-training",
-    title: "GA Healthcare Training",
-    category: "Healthcare Training Provider",
+    title: "GA Healthcare Training & Consulting",
+    category: "CPR & BLS Training Centre, Georgia",
     description: "Training website for an American Heart Association course provider in Lilburn, Georgia, covering BLS, ACLS, PALS and Heartsaver classes with a class calendar and program registration.",
-    image: "/assets/images/portfolio/ga-healthcare-training-wordpress-website.webp",
-    tags: ["Gutenberg", "Course Calendar", "Local SEO"],
-    demoUrl: "https://gahealthcaretraining.com/",
-    scope: "Education Website"
+    image: "/assets/images/portfolio/ga-healthcare-training-website.webp",
+    tags: ["WordPress", "Course Calendar", "LMS Login"],
+    demoUrl: "https://gahealthcaretraining.com/"
   },
   {
     id: "jazba-entertainment",
     title: "Jazba Entertainment",
-    category: "Music, Film & Live Events",
-    description: "Brand website for a music, film and live events company, presenting studio sessions, artist management, events and ticketing with bold event-style visuals.",
-    image: "/assets/images/portfolio/jazba-entertainment-wordpress-website.webp",
-    tags: ["Gutenberg", "Events", "Artist Booking"],
-    demoUrl: "https://jazbaentertainment.com/",
-    scope: "Brand Website"
+    category: "Music, Film & Live Events Company",
+    description: "Brand website for a music, film and live events company, presenting studio sessions, artist management, events and ticketing.",
+    image: "/assets/images/portfolio/jazba-entertainment-website.webp",
+    tags: ["WordPress", "Events", "Artist Booking"],
+    demoUrl: "https://jazbaentertainment.com/"
   },
   {
     id: "jazba-tickets",
     title: "Jazba Tickets",
     category: "Event Ticketing Platform",
-    description: "Pre-launch website for a ticketing platform covering concerts, theatre, comedy, sport and festivals, with an email waitlist and artist booking features.",
+    description: "Pre-launch website for a ticketing platform covering concerts, theatre, comedy, sport and festivals, with an email waitlist and artist booking.",
     image: "/assets/images/portfolio/jazba-tickets-website.webp",
-    tags: ["React", "Waitlist Capture", "Launch Page"],
-    demoUrl: "https://jazbatickets.com/",
-    scope: "Custom Web Build",
-    builtWith: "React"
+    tags: ["React", "Waitlist", "Launch Page"],
+    demoUrl: "https://jazbatickets.com/"
   },
   {
     id: "abc-crane-hire",
     title: "ABC Crane Hire",
-    category: "Crane Hire Company",
-    description: "Service website for a Perth crane hire company covering Franna, Tom Thumb, Hiab and mobile cranes, with location pages and contact details always one tap away.",
-    image: "/assets/images/portfolio/abc-crane-hire-wordpress-website.webp",
-    tags: ["Elementor", "Rank Math SEO", "Location Pages"],
-    demoUrl: "https://abccranehire.com.au/",
-    scope: "Local Service Website"
+    category: "Crane Hire Company, Perth",
+    description: "Service website for a Perth crane hire company covering Franna, Tom Thumb, Hiab and mobile cranes, with location pages and contact details one tap away.",
+    image: "/assets/images/portfolio/abc-crane-hire-website.webp",
+    tags: ["WordPress", "Elementor", "Rank Math SEO"],
+    demoUrl: "https://abccranehire.com.au/"
   },
   {
-    id: "psg-business-consulting",
-    title: "PSG Business Consulting",
-    category: "Business Management Consultancy",
+    id: "prime-strategies-group",
+    title: "Prime Strategies Group",
+    category: "Business Management Consultancy, Perth",
     description: "Website for a Perth and Mandurah business management consultancy that helps WA small business owners, with advisory services, group coaching and free consultation booking.",
-    image: "/assets/images/portfolio/psg-business-consulting-wordpress-website.webp",
+    image: "/assets/images/portfolio/prime-strategies-group-website.webp",
     tags: ["WordPress", "Lead Generation", "Local SEO"],
-    demoUrl: "https://psgwa.com.au/",
-    scope: "Consulting Website"
+    demoUrl: "https://psgwa.com.au/"
   },
   {
     id: "brightway-consult-solutions",
-    title: "Brightway Consult Solutions",
-    category: "HR & Business Consulting",
+    title: "Brightway Consult & HR Recruiting Solutions",
+    category: "HR & Business Consulting Firm",
     description: "Corporate website for a consulting and HR recruiting firm offering recruitment, workforce development, education, technology and eCommerce services.",
-    image: "/assets/images/portfolio/brightway-consult-solutions-wordpress-website.webp",
-    tags: ["Elementor", "Service Pages", "Quote Requests"],
-    demoUrl: "https://brightwayconsultsolutions.com/",
-    scope: "Corporate Website"
+    image: "/assets/images/portfolio/brightway-consult-solutions-website.webp",
+    tags: ["WordPress", "Elementor", "Quote Requests"],
+    demoUrl: "https://brightwayconsultsolutions.com/"
   },
   {
     id: "brightway-group",
     title: "Brightway Group",
     category: "Group of Companies",
     description: "Parent-brand website for a group of companies spanning consulting, HR, education, technology, publishing and international commerce.",
-    image: "/assets/images/portfolio/brightway-group-wordpress-website.webp",
-    tags: ["Elementor", "Multi-Brand", "Corporate Design"],
-    demoUrl: "https://brightwaygroup.org/",
-    scope: "Corporate Website"
+    image: "/assets/images/portfolio/brightway-group-website.webp",
+    tags: ["WordPress", "Elementor", "Multi-Brand"],
+    demoUrl: "https://brightwaygroup.org/"
   },
   {
     id: "dr-ransford-addo",
     title: "Dr. Ransford M. K. Addo",
-    category: "Author & Change Practitioner",
+    category: "Author & Organizational Development Practitioner",
     description: "Personal brand website for an author and organizational development practitioner, featuring his books, events and speaking enquiries.",
-    image: "/assets/images/portfolio/dr-ransford-addo-wordpress-website.webp",
-    tags: ["Elementor", "Book Showcase", "Personal Brand"],
-    demoUrl: "https://ransfordaddo.com/",
-    scope: "Author Website"
+    image: "/assets/images/portfolio/dr-ransford-addo-website.webp",
+    tags: ["WordPress", "Elementor", "Book Showcase"],
+    demoUrl: "https://ransfordaddo.com/"
   },
   {
     id: "fijian-real-estate",
     title: "Fijian Real Estate",
-    category: "Property Marketplace",
+    category: "Property Marketplace, Fiji",
     description: "Property marketplace for buying and selling real estate in Fiji, with international listings, property search and an English/Chinese language switcher.",
-    image: "/assets/images/portfolio/fijian-real-estate-wordpress-website.webp",
-    tags: ["Gutenberg", "Property Listings", "Multilingual"],
-    demoUrl: "https://fijianrealestate.com/",
-    scope: "Real Estate Website"
+    image: "/assets/images/portfolio/fijian-real-estate-website.webp",
+    tags: ["WordPress", "Property Listings", "Multilingual"],
+    demoUrl: "https://fijianrealestate.com/"
   },
   {
-    id: "myrentfiji",
+    id: "myrent-fiji",
     title: "myRent Fiji",
-    category: "Rental Property Platform",
+    category: "Rental Property Platform, Fiji",
     description: "Rental platform for Fiji landlords and tenants with property search, tenant checks, digital signing and rent payment tracking.",
-    image: "/assets/images/portfolio/myrentfiji-wordpress-website.webp",
-    tags: ["Gutenberg", "Property Search", "Landlord Tools"],
-    demoUrl: "https://myrentfiji.com/",
-    scope: "Rental Platform"
+    image: "/assets/images/portfolio/myrent-fiji-website.webp",
+    tags: ["WordPress", "Property Search", "Landlord Tools"],
+    demoUrl: "https://myrentfiji.com/"
   },
   {
-    id: "tvdm-digital-marketing",
-    title: "TVDM Digital Marketing",
-    category: "Digital Marketing Agency",
+    id: "true-vine-digital-marketing",
+    title: "True Vine Digital Marketing",
+    category: "Digital Marketing Agency, Perth",
     description: "Website for a Perth digital marketing agency offering web design, SEO, local search, digital advertising, AI chatbots and lead generation.",
-    image: "/assets/images/portfolio/tvdm-digital-marketing-wordpress-website.webp",
-    tags: ["WooCommerce", "SEO Services", "Lead Generation"],
-    demoUrl: "https://tvdm.au/",
-    scope: "Agency Website"
+    image: "/assets/images/portfolio/true-vine-digital-marketing-website.webp",
+    tags: ["WordPress", "WooCommerce", "SEO Services"],
+    demoUrl: "https://tvdm.au/"
   },
   {
     id: "project-1",
-    title: "Arch Dermatology Center",
-    category: "Medical & Clinical Portal",
-    description: "Developed a secure clinical website featuring precise doctor search tools, digital appointment scheduling, and localized map details, keeping the core script bundles lightweight.",
-    image: "/assets/images/portfolio/arch-dermatology-center-wordpress-website.webp",
-    tags: ["Elementor Pro", "Custom CSS", "Booking Pipeline"],
-    demoUrl: "https://archdermatology.com/",
-    scope: "Responsive Development"
+    title: "Arch Dermatology Institute",
+    category: "Dermatology Clinic, St. Louis",
+    description: "Website for a St. Louis dermatology practice focused on skin cancer screening, with pages for medical and cosmetic dermatology and clinic locations.",
+    image: "/assets/images/portfolio/arch-dermatology-institute-website.webp",
+    tags: ["WordPress", "Elementor Pro", "Medical Services"],
+    demoUrl: "https://archdermatology.com/"
   },
   {
     id: "project-2",
-    title: "Flechtarbeiten Studio",
-    category: "Traditional Crafts Showroom",
-    description: "A minimalist digital catalogue exhibiting premium hand-woven products. Built with soft typography styles, structured CSS grids, and optimized image rendering.",
-    image: "/assets/images/portfolio/flechtarbeiten-studio-wordpress-website.webp",
-    tags: ["Custom Gutenberg", "Responsive Grid", "Image SEO"],
-    demoUrl: "https://flechtarbeiten.de/",
-    scope: "Interactive Showroom"
+    title: "Flechtarbeiten Peter",
+    category: "Chair Caning Workshop, Germany",
+    description: "Website for a family chair-caning workshop that restores woven seats by hand, including Thonet and Tecta classics and rush seating.",
+    image: "/assets/images/portfolio/flechtarbeiten-peter-website.webp",
+    tags: ["WordPress", "Service Pages", "German Language"],
+    demoUrl: "https://flechtarbeiten.de/"
   },
   {
     id: "project-3",
     title: "Goepfert Express",
-    category: "Logistics & Transport Hub",
-    description: "Programmed a reliable courier team portal with streamlined intake questionnaires and quick local quote calculations that run cleanly on mobile.",
-    image: "/assets/images/portfolio/goepfert-express-wordpress-website.webp",
-    tags: ["Form Architecture", "Custom Logic", "Localization"],
-    demoUrl: "https://goepfert-express.solutions-vogelfrei.de/",
-    scope: "Frontend Engineering"
+    category: "Courier & Express Logistics, Germany",
+    description: "Website for a courier and express logistics company delivering across Germany and Europe, with service pages and a quote request form.",
+    image: "/assets/images/portfolio/goepfert-express-website.webp",
+    tags: ["Courier Services", "Quote Form", "German Language"],
+    demoUrl: "https://goepfert-express.solutions-vogelfrei.de/"
   },
   {
     id: "project-4",
-    title: "Zero Trip Mobility",
-    category: "Sustainable Travel Storefront",
-    description: "Consulted on a high-performing e-commerce framework to support modern physical goods. Included instant checkout filters and lean AJAX shopping cart mechanics.",
-    image: "/assets/images/portfolio/zero-trip-mobility-wordpress-website.webp",
-    tags: ["WooCommerce", "Cart Optimization", "Speed Tuned"],
-    demoUrl: "https://zero-trip.com/",
-    scope: "E-Commerce Pipeline"
+    title: "Zero Trip Innovations",
+    category: "Directional Drilling Technology",
+    description: "Product website for the Zero-Trip Wedge, a directional drilling tool that enables fast sidetrack drilling while reducing time, cost and risk.",
+    image: "/assets/images/portfolio/zero-trip-innovations-website.webp",
+    tags: ["WordPress", "Product Website", "Industrial"],
+    demoUrl: "https://zero-trip.com/"
   },
   {
     id: "project-5",
-    title: "Die Chaoskiller Berlin",
-    category: "Home & Office Organization",
-    description: "Engineered a rapid-response landing page with deep Local SEO structures and crisp schema codes to help convert regional service traffic.",
-    image: "/assets/images/portfolio/die-chaoskiller-berlin-wordpress-website.webp",
-    tags: ["Theme Code", "Structured Data", "Conversion Flow"],
-    demoUrl: "https://die-chaoskiller-berlin.de/",
-    scope: "Local Lead Funnel"
+    title: "Chaos-Killer Berlin",
+    category: "Junk Removal & Clearance, Berlin",
+    description: "Website for a Berlin company offering junk removal, house clearances, waste disposal and skip hire.",
+    image: "/assets/images/portfolio/chaos-killer-berlin-website.webp",
+    tags: ["WordPress", "Local Services", "German Language"],
+    demoUrl: "https://die-chaoskiller-berlin.de/"
   },
   {
     id: "project-6",
-    title: "CAISD Africa Network",
-    category: "Regional Policy Advisory",
-    description: "Developed an open resource archive featuring publication indices, responsive grid controls, and print-style overrides for academic documents.",
-    image: "/assets/images/portfolio/caisd-africa-network-wordpress-website.webp",
-    tags: ["Directory Setup", "Core Blocks", "Contrast Compliance"],
-    demoUrl: "https://caisd.africa/",
-    scope: "White-Label Development"
+    title: "CAISD",
+    category: "AI & Sustainable Development Centre, Africa",
+    description: "Website for the Centre for Artificial Intelligence and Sustainable Development, presenting its research, programmes and partnerships across Africa.",
+    image: "/assets/images/portfolio/caisd-website.webp",
+    tags: ["Research Centre", "Education", "Responsive Design"],
+    demoUrl: "https://caisd.africa/"
   },
   {
     id: "project-8",
-    title: "CSFM Cleaning Services",
-    category: "Facility Management Hub",
-    description: "Built a customized service booking portal featuring automatic location selections and streamlined customer quotes under NDA.",
-    image: "/assets/images/portfolio/csfm-cleaning-services-wordpress-website.webp",
-    tags: ["Elementor Custom", "Custom Form Scripts", "Responsive Menu"],
-    demoUrl: "https://csfmcleaning.com/",
-    scope: "Application Mockup"
+    title: "CSFM Cleaning",
+    category: "Home Cleaning Services, Birmingham",
+    description: "Website for a Birmingham cleaning company offering affordable, reliable home cleaning, with service pages and quick quote requests.",
+    image: "/assets/images/portfolio/csfm-cleaning-website.webp",
+    tags: ["WordPress", "Quote Requests", "Local Services"],
+    demoUrl: "https://csfmcleaning.com/"
   },
   {
     id: "project-9",
-    title: "4TS Architectural Atelier",
-    category: "Structural Design Portfolio",
-    description: "Coded a high-concept visual showcase with fluid hover logic and precise margins, designed to replicate exact Figma templates.",
-    image: "/assets/images/portfolio/4ts-architectural-atelier-wordpress-website.webp",
-    tags: ["Figma to Code", "Gutenberg Core", "Clean Grid"],
-    demoUrl: "https://www.4tsstudio.org/",
-    scope: "Layout Engineering"
+    title: "4TS T-Shirt Studio",
+    category: "Custom T-Shirt Store",
+    description: "Online store for custom-printed T-shirts, with product showcases, free shipping and rush delivery options.",
+    image: "/assets/images/portfolio/4ts-t-shirt-studio-website.webp",
+    tags: ["WordPress", "eCommerce", "Product Showcase"],
+    demoUrl: "https://www.4tsstudio.org/"
   },
   {
     id: "project-10",
-    title: "iUveda Wellness Hub",
-    category: "Holistic Consultation Platform",
-    description: "Stripped a content-dense wellness directory of bloated plugins, achieving mobile load times below 1.4 seconds with inline design paths.",
-    image: "/assets/images/portfolio/iuveda-wellness-hub-wordpress-website.webp",
-    tags: ["Core Web Vitals", "Custom Gutenberg", "Asset Pruning"],
-    demoUrl: "https://iuvedalife.com/",
-    scope: "Speed Optimization"
+    title: "IUVEDA Life",
+    category: "Ayurveda & Vedic Wellness",
+    description: "Wellness website sharing Ayurveda and Vedic guides on dosha balancing and daily rituals, inspired by Sri Vrindavan Dham.",
+    image: "/assets/images/portfolio/iuveda-life-website.webp",
+    tags: ["WordPress", "Content Library", "Wellness"],
+    demoUrl: "https://iuvedalife.com/"
   },
   {
     id: "project-11",
-    title: "Privelux Wealth Advisory",
-    category: "Asset Allocation Counsel",
-    description: "A secure corporate platform delivering localized consulting resources, complete with reliable lead capture fields and strict code hygiene.",
-    image: "/assets/images/portfolio/privelux-wealth-advisory-wordpress-website.webp",
-    tags: ["Solid Typography", "Forms Hardening", "Strict NDA"],
-    demoUrl: "https://priveluxadvisory.com/",
-    scope: "Institutional Code"
+    title: "Privé LUX Advisory Group",
+    category: "Wealth Advisory Firm",
+    description: "Website for a wealth advisory group helping individuals and families grow and protect their wealth, with consultation booking.",
+    image: "/assets/images/portfolio/prive-lux-advisory-group-website.webp",
+    tags: ["WordPress", "Financial Services", "Lead Capture"],
+    demoUrl: "https://priveluxadvisory.com/"
   },
   {
     id: "project-12",
     title: "Infinite Calculators",
-    category: "Mathematical Web Tools",
-    description: "Built a suite of functional JavaScript tools returning arithmetic results instantly in the browser without high server execution overhead.",
-    image: "/assets/images/portfolio/infinite-calculators-wordpress-website.webp",
-    tags: ["JS Math Script", "Responsive UI", "Page Engine Tuning"],
-    demoUrl: "https://infinitecalculators.com/",
-    scope: "Custom Tool coding"
+    category: "Online Calculator Website",
+    description: "A collection of free online calculators that give fast, accurate results right in the browser.",
+    image: "/assets/images/portfolio/infinite-calculators-website.webp",
+    tags: ["Calculators", "JavaScript", "Responsive Design"],
+    demoUrl: "https://infinitecalculators.com/"
   },
   {
     id: "project-13",
-    title: "Olimotion Studio",
-    category: "Movement & Motion Platform",
-    description: "Crafted interactive vectors and animated scroll points that load swiftly on slow cell arrays, maintaining design fidelity.",
-    image: "/assets/images/portfolio/olimotion-studio-wordpress-website.webp",
-    tags: ["CSS Animations", "Asset Delivery", "Performance Index"],
-    demoUrl: "https://olimotion.com/",
-    scope: "Media Engineering"
+    title: "Olimotion Ireland",
+    category: "Hydraulic Cylinder Manufacturer, Ireland",
+    description: "Website for an Irish engineering company that manufactures large hydraulic cylinders and provides engineering services.",
+    image: "/assets/images/portfolio/olimotion-ireland-website.webp",
+    tags: ["Industrial", "Engineering", "Lead Generation"],
+    demoUrl: "https://olimotion.com/"
   },
   {
     id: "project-14",
-    title: "Istanbul Restaurant",
-    category: "Culinary Reservations",
-    description: "Structured an easy-to-browse menu hierarchy and integrated a reservations pipeline, focusing heavily on touch targets on mobile screens.",
-    image: "/assets/images/portfolio/istanbul-restaurant-wordpress-website.webp",
-    tags: ["Mobile Booking", "Responsive Layout", "SEO Structure"],
-    demoUrl: "https://istanbulrestaurantbirmingham.com/",
-    scope: "Gutenberg Core Builder"
+    title: "Istanbul Restaurant Birmingham",
+    category: "Turkish Restaurant, Birmingham",
+    description: "Website for a Turkish restaurant in Birmingham with an easy-to-browse menu and table reservations.",
+    image: "/assets/images/portfolio/istanbul-restaurant-birmingham-website.webp",
+    tags: ["WordPress", "Restaurant Menu", "Reservations"],
+    demoUrl: "https://istanbulrestaurantbirmingham.com/"
   },
   {
     id: "project-15",
-    title: "Red X Pink Commerce",
-    category: "Boutique Fashion Store",
-    description: "Developed a lightweight custom e-commerce checkout interface that minimizes cart abandonment rates through streamlined interactions.",
-    image: "/assets/images/portfolio/red-x-pink-commerce-wordpress-website.webp",
-    tags: ["WooCommerce Dev", "Stripe Checkout", "Product Grid"],
-    demoUrl: "https://redxpink.com/",
-    scope: "E-Commerce Integration"
+    title: "Red X Pink Management",
+    category: "Creator Management Agency",
+    description: "Website for a talent management agency that helps online creators grow their social media reach and income.",
+    image: "/assets/images/portfolio/red-x-pink-management-website.webp",
+    tags: ["WordPress", "Agency Website", "Lead Generation"],
+    demoUrl: "https://redxpink.com/"
   },
   {
     id: "project-16",
-    title: "SMB Power & Infrastructure",
-    category: "Industrial Power Engineering",
-    description: "A clean, informative presentation for commercial solar installers, complete with credentials panels and accessible document libraries.",
-    image: "/assets/images/portfolio/smb-power-infrastructure-wordpress-website.webp",
-    tags: ["B2B Layout", "High Contrast", "Typography Setup"],
-    demoUrl: "https://smbelectrical.ca/",
-    scope: "Agency Support Dev"
+    title: "SMB Electrical",
+    category: "Electricians, Toronto",
+    description: "Website for a Toronto electrical contractor offering residential and commercial installations, repairs and upgrades.",
+    image: "/assets/images/portfolio/smb-electrical-website.webp",
+    tags: ["WordPress", "Local Services", "Quote Requests"],
+    demoUrl: "https://smbelectrical.ca/"
   },
   {
     id: "project-17",
     title: "Slotenspecialist Direct",
-    category: "Emergency Locksmith Network",
-    description: "A high-performance portal designed for emergency lock support, optimized to reach perfect mobile core score loads under 1 second.",
-    image: "/assets/images/portfolio/slotenspecialist-direct-wordpress-website.webp",
-    tags: ["Speed Blueprint", "Mobile CTA", "Hotline Call Tap"],
-    demoUrl: "https://www.slotenspecialistdirect.nl/",
-    scope: "Performance Tuning"
+    category: "Locksmith, Netherlands",
+    description: "Website for a Dutch locksmith service with emergency call-outs and a prominent tap-to-call number on mobile.",
+    image: "/assets/images/portfolio/slotenspecialist-direct-website.webp",
+    tags: ["WordPress", "Emergency Services", "Click-to-Call"],
+    demoUrl: "https://www.slotenspecialistdirect.nl/"
   },
   {
     id: "project-18",
-    title: "Ace Impact Advisory",
-    category: "Corporate Consulting Hub",
-    description: "A premium advisory site featuring statistics widgets, customized team showcases, and secure contact endpoints built cleanly for agency client.",
-    image: "/assets/images/portfolio/ace-impact-advisory-wordpress-website.webp",
-    tags: ["Flexible Gutenberg", "Asset Delivery", "Form Pipelines"],
-    demoUrl: "https://aceimpactllc.com/",
-    scope: "Figma to WordPress"
+    title: "ACE IMPACT LLC",
+    category: "Training & Personal Development",
+    description: "Website for a training company offering workshops, events and personal development programs.",
+    image: "/assets/images/portfolio/ace-impact-website.webp",
+    tags: ["WordPress", "Events", "Training"],
+    demoUrl: "https://aceimpactllc.com/"
   },
   {
     id: "project-19",
-    title: "Casa Suerte Retreat",
-    category: "Luxury Spanish Retreat",
-    description: "A vacation rental showcase featuring instant booking inquiries, custom location map integrations, and automated live calendar feeds.",
-    image: "/assets/images/portfolio/casa-suerte-retreat-wordpress-website.webp",
-    tags: ["Rental Calendar", "Gutenberg Layout", "Local Map Dev"],
-    demoUrl: "https://www.casa-suerte.nl/",
-    scope: "Booking Development"
+    title: "Casa Suerte",
+    category: "Holiday Apartment, Costa Blanca",
+    description: "Booking website for a luxury holiday apartment in San Miguel de Salinas on Spain's Costa Blanca.",
+    image: "/assets/images/portfolio/casa-suerte-website.webp",
+    tags: ["WordPress", "Holiday Rental", "Dutch Language"],
+    demoUrl: "https://www.casa-suerte.nl/"
   },
   {
     id: "project-20",
-    title: "Wise Origin Coffee",
-    category: "Artisan Coffee Roasters",
-    description: "Built the digital presence for an independent coffee workshop. Features robust product layout templates that clients can easily adjust.",
-    image: "/assets/images/portfolio/wise-origin-coffee-wordpress-website.webp",
-    tags: ["Craft Product Show", "Performance Index", "Elementor Pro"],
-    demoUrl: "https://wiseorigin.co.uk/",
-    scope: "Theme Integration"
+    title: "Wise Origin",
+    category: "Training Provider, UK",
+    description: "Website for a UK training provider that helps people build careers through courses and programs.",
+    image: "/assets/images/portfolio/wise-origin-website.webp",
+    tags: ["WordPress", "Education", "Course Pages"],
+    demoUrl: "https://wiseorigin.co.uk/"
   },
   {
     id: "project-21",
     title: "DJ Schilderwerken",
-    category: "Artisan Wood Coating Services",
-    description: "High-end painting portfolio featuring clean split compare sliders to showcase client projects without hurting performance index metrics.",
-    image: "/assets/images/portfolio/dj-schilderwerken-wordpress-website.webp",
-    tags: ["Split Sliders", "Lead Funnel", "Modern Layout"],
-    demoUrl: "https://www.djschilderwerken.nl/",
-    scope: "Interactive Dev"
+    category: "Painting Contractor, Netherlands",
+    description: "Website for a Dutch painting company offering professional interior and exterior painting.",
+    image: "/assets/images/portfolio/dj-schilderwerken-website.webp",
+    tags: ["WordPress", "Local Services", "Dutch Language"],
+    demoUrl: "https://www.djschilderwerken.nl/"
   },
   {
     id: "project-22",
-    title: "Danis Private Moving",
-    category: "Local Transport Logistics",
-    description: "A clean multi-step estimation wizard built to help clients request quotes based on volume and distance easily.",
-    image: "/assets/images/portfolio/danis-private-moving-wordpress-website.webp",
-    tags: ["Logistics Calculator", "Step Form CSS", "User Flow Setup"],
-    demoUrl: "https://www.danis-umzuege.de/",
-    scope: "Custom App Code"
+    title: "Danis Umzüge",
+    category: "Moving Company, Braunschweig",
+    description: "Website for a moving company in Braunschweig, with service pages and a quote request form.",
+    image: "/assets/images/portfolio/danis-umzuege-website.webp",
+    tags: ["WordPress", "Quote Form", "German Language"],
+    demoUrl: "https://www.danis-umzuege.de/"
   },
   {
     id: "project-23",
-    title: "Victory Umzüge Berlin",
-    category: "Commercial Relocation",
-    description: "A multi-page corporate logistics site offering automated estimation formulas, bilingual setup configurations, and custom styled forms.",
-    image: "/assets/images/portfolio/victory-umzuge-berlin-wordpress-website.webp",
-    tags: ["Logistics Engine", "Localization Dev", "Security Check"],
-    demoUrl: "https://victory-umzuege.de/",
-    scope: "Clean Code Theme"
+    title: "Victory Umzüge",
+    category: "Moving Company, Frankfurt",
+    description: "Website for a Frankfurt moving company with fast online quotes for home and office moves.",
+    image: "/assets/images/portfolio/victory-umzuege-website.webp",
+    tags: ["WordPress", "Online Quotes", "German Language"],
+    demoUrl: "https://victory-umzuege.de/"
   },
   {
     id: "project-24",
-    title: "Niyum Produce Trading",
-    category: "Wholesale Grocery Hub",
-    description: "An elegant bulk trade directory utilizing Custom Post Types to render farm product tables clearly for international buyers.",
-    image: "/assets/images/portfolio/niyum-produce-trading-wordpress-website.webp",
-    tags: ["Custom Fields", "Bulk Table List", "Lightweight Gutenberg"],
-    demoUrl: "https://www.niyumtrading.com/",
-    scope: "Dynamic Content Dev"
+    title: "Niyum Trading",
+    category: "Trading Company, Cambodia",
+    description: "Corporate website for a Cambodian trading company, presenting its products, services and partners.",
+    image: "/assets/images/portfolio/niyum-trading-website.webp",
+    tags: ["WordPress", "Corporate Website", "Product Pages"],
+    demoUrl: "https://www.niyumtrading.com/"
   },
   {
     id: "project-25",
-    title: "Vanguard Performance Hub",
-    category: "Athletic Conditioning Gym",
-    description: "A highly responsive layout built to handle trainer timetables, location details, and class registrations efficiently.",
-    image: "/assets/images/portfolio/vanguard-performance-hub-wordpress-website.webp",
-    tags: ["Speed Index 98%", "Registration CTA", "Responsive tables"],
-    demoUrl: "https://vanguardstrengthfitness.com/",
-    scope: "Performance Blueprint"
+    title: "Vanguard Strength & Fitness",
+    category: "Personal Training & Fitness",
+    description: "Website for a strength and fitness coach offering personalised training programs and appointment booking.",
+    image: "/assets/images/portfolio/vanguard-strength-fitness-website.webp",
+    tags: ["WordPress", "Appointments", "Fitness"],
+    demoUrl: "https://vanguardstrengthfitness.com/"
   },
   {
     id: "project-26",
     title: "Zion Coach Services",
-    category: "Group Transit Logistics",
-    description: "A customized coach hire platform featuring high-contrast travel options and streamlined booking inquiries.",
-    image: "/assets/images/portfolio/zion-coach-services-wordpress-website.webp",
-    tags: ["Booking Forms", "Elementor", "Local SEO Optimization"],
-    demoUrl: "https://zioncoachservices.com.au/",
-    scope: "Theme Engineering"
+    category: "Bus & Coach Hire, Australia",
+    description: "Website for an Australian bus and coach hire company offering safe, reliable group transport with quick booking enquiries.",
+    image: "/assets/images/portfolio/zion-coach-services-website.webp",
+    tags: ["WordPress", "Booking Enquiries", "Transport"],
+    demoUrl: "https://zioncoachservices.com.au/"
   },
   {
     id: "project-27",
-    title: "Quincy Congressional Forum",
-    category: "Public Campaign Hub",
-    description: "Structured a compliant outreach site engineered to support heavy dynamic traffic with locked-down scripts.",
-    image: "/assets/images/portfolio/quincy-congressional-forum-wordpress-website.webp",
-    tags: ["Clean Gutenberg", "Accessible Setup", "SEO Structure"],
-    demoUrl: "https://quincyforcongress.com/",
-    scope: "Access-First Development"
+    title: "Quincy Bareebe for Congress",
+    category: "Political Campaign Website",
+    description: "Campaign website for Quincy Bareebe, a Democratic candidate for Maryland's 5th Congressional District.",
+    image: "/assets/images/portfolio/quincy-bareebe-for-congress-website.webp",
+    tags: ["WordPress", "Campaign Website", "Video Hero"],
+    demoUrl: "https://quincyforcongress.com/"
   },
   {
     id: "project-28",
-    title: "Thomwerk Atelier",
-    category: "Bespoke Carpentry Workshop",
-    description: "Turned precise architectural grids into flexible content modules with no layouts shifts, emphasizing spatial woodwork galleries.",
-    image: "/assets/images/portfolio/thomwerk-atelier-wordpress-website.webp",
-    tags: ["Figma to Gutenberg", "Masonry Gallery", "Core Vitals optimized"],
-    demoUrl: "https://thomwerk.nl/",
-    scope: "Pixel-Perfect Development"
+    title: "Thomwerk",
+    category: "Technical Staffing Agency, Eindhoven",
+    description: "Website for a technical staffing agency in Eindhoven with job listings for skilled trades.",
+    image: "/assets/images/portfolio/thomwerk-website.webp",
+    tags: ["WordPress", "Job Listings", "Dutch Language"],
+    demoUrl: "https://thomwerk.nl/"
   }
 ];
 

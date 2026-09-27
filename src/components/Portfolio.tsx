@@ -5,6 +5,7 @@
 
 import { portfolioData } from "../data";
 import { PortfolioItem } from "../types";
+import { useHydrated } from "../useHydrated";
 import { ExternalLink } from "lucide-react";
 
 // Card widths are 300px / 440px (sm) / 480px (md); each screenshot ships at 480w and 960w
@@ -30,7 +31,7 @@ function ProjectCard({ project, isCopy }: { project: PortfolioItem; isCopy: bool
         sizes={IMAGE_SIZES}
         width={960}
         height={640}
-        alt={isCopy ? "" : `${project.title} – ${project.category} ${project.builtWith ?? "WordPress"} website`}
+        alt={isCopy ? "" : `${project.title} – ${project.category}`}
         className="w-full h-full object-contain bg-[#3F58E0] transition-transform duration-500 scale-100 group-hover:scale-[1.03]"
         loading="lazy"
         decoding="async"
@@ -51,9 +52,11 @@ export default function Portfolio() {
   const row1Base = portfolioData.filter((_, idx) => idx % 2 === 0);
   const row2Base = portfolioData.filter((_, idx) => idx % 2 === 1);
 
-  // Duplicate items to ensure a seamless infinite wrapping transition width
-  const row1Items = [...row1Base, ...row1Base];
-  const row2Items = [...row2Base, ...row2Base];
+  // The seamless loop needs every card twice. The copies are added only in the browser,
+  // so the prerendered HTML has one link per project, and the rows start moving once they exist.
+  const hydrated = useHydrated();
+  const row1Items = hydrated ? [...row1Base, ...row1Base] : row1Base;
+  const row2Items = hydrated ? [...row2Base, ...row2Base] : row2Base;
 
   return (
     <section id="portfolio" className="bg-[#F6F7F7] py-20 lg:py-28 text-primary-text scroll-mt-20 overflow-hidden">
@@ -83,7 +86,7 @@ export default function Portfolio() {
 
         {/* Row 1 Carousel: Sliding Leftwards */}
         <div className="relative w-full overflow-hidden py-2 flex select-none">
-          <div className="marquee-track flex gap-6 animate-marquee-left w-max">
+          <div className={`marquee-track flex gap-6 w-max ${hydrated ? "animate-marquee-left" : ""}`}>
             {row1Items.map((project, idx) => (
               <ProjectCard key={`${project.id}-r1-${idx}`} project={project} isCopy={idx >= row1Base.length} />
             ))}
@@ -92,7 +95,7 @@ export default function Portfolio() {
 
         {/* Row 2 Carousel: Sliding Rightwards */}
         <div className="relative w-full overflow-hidden py-2 flex select-none">
-          <div className="marquee-track flex gap-6 animate-marquee-right w-max">
+          <div className={`marquee-track flex gap-6 w-max ${hydrated ? "animate-marquee-right" : ""}`}>
             {row2Items.map((project, idx) => (
               <ProjectCard key={`${project.id}-r2-${idx}`} project={project} isCopy={idx >= row2Base.length} />
             ))}

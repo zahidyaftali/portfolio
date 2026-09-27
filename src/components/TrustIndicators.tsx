@@ -3,7 +3,10 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+import { useHydrated } from "../useHydrated";
+
 export default function TrustIndicators() {
+  const hydrated = useHydrated();
   const logos = [
     { id: 7, src: "/assets/images/logos/shopify-logo.webp", alt: "Shopify", width: 320, height: 91 },
     { id: 1, src: "/assets/images/logos/woocommerce-logo.webp", alt: "WooCommerce", width: 320, height: 65 },
@@ -14,8 +17,9 @@ export default function TrustIndicators() {
     { id: 6, src: "/assets/images/logos/bluehost-logo.webp", alt: "Bluehost", width: 320, height: 53 },
   ];
 
-  // Duplicate the logos to create the infinite seamless ticker effect
-  const marqueeLogos = [...logos, ...logos, ...logos, ...logos];
+  // The infinite ticker needs the logos 4 times; the copies are added only in the browser
+  // so the prerendered HTML lists each logo once
+  const marqueeLogos = hydrated ? [...logos, ...logos, ...logos, ...logos] : logos;
 
   return (
     <section aria-label="Platforms and tools I work with" className="bg-[#F6F7F7] pt-1 pb-6 overflow-hidden w-full">
@@ -27,7 +31,7 @@ export default function TrustIndicators() {
         <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-24 bg-gradient-to-l from-[#F6F7F7] to-transparent z-10 pointer-events-none" />
 
         {/* Scrolling Track */}
-        <div className="marquee-track flex gap-16 items-center w-max py-2 animate-marquee-logos">
+        <div className={`marquee-track flex gap-16 items-center w-max py-2 ${hydrated ? "animate-marquee-logos" : ""}`}>
           {marqueeLogos.map((logo, index) => {
             // Only the first set is meaningful; the copies exist for the seamless loop
             const isCopy = index >= logos.length;
